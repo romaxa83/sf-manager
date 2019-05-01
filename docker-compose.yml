@@ -1,0 +1,33 @@
+version: '3'
+services:
+    app-nginx:
+        build:
+            context: ./app/docker/dev
+            dockerfile: nginx.docker
+        volumes:
+            - ./app:/var/www/app
+        depends_on:
+            - app-php-fpm
+        ports:
+            - "8080:80"
+    app-php-fpm:
+        build:
+            context: ./app/docker/dev
+            dockerfile: php-fpm.docker
+        environment:
+            APP_DEBUG: 1    
+        volumes:
+            - ./app:/var/www/app
+    app-php-cli:
+        build:
+            context: ./app/docker/dev
+            dockerfile: php-cli.docker
+        environment:
+            APP_DEBUG: 1     
+        volumes:
+            - ./app:/var/www/app
+            - composer:/root/.composer/cache #кешируем данные composer
+        working_dir: /var/www/app    
+
+volumes:
+    composer:   
