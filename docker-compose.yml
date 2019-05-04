@@ -10,6 +10,7 @@ services:
             - app-php-fpm
         ports:
             - "8080:80"
+
     app-php-fpm:
         build:
             context: ./app/docker/dev
@@ -18,6 +19,7 @@ services:
             APP_DEBUG: 1    
         volumes:
             - ./app:/var/www/app
+
     app-php-cli:
         build:
             context: ./app/docker/dev
@@ -27,7 +29,29 @@ services:
         volumes:
             - ./app:/var/www/app
             - composer:/root/.composer/cache #кешируем данные composer
-        working_dir: /var/www/app    
+        working_dir: /var/www/app
+
+    app-postgres: 
+        image: postgres:11.2-alpine
+        environment:
+            - POSTGRES_USER=app
+            - POSTGRES_PASSWORD=secret
+            - POSTGRES_DB=app  
+        volumes:
+            - ./app/var/docker/postgres:/var/lib/postgresql/data
+        ports: 
+            - "54321:5432"
+
+    pgadmin:
+        image: dpage/pgadmin4
+        depends_on:
+            - app-postgres
+        ports:
+            - "5555:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+            PGADMIN_DEFAULT_PASSWORD: admin
+        restart: unless-stopped
 
 volumes:
-    composer:   
+    composer:  

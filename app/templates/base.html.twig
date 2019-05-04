@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <!-- Custom styles for this template -->
+
+	{% block stylesheets %}
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	{% endblock %}
+
+    <style>
+    	main > .container {
+    		padding: 80px 15px 0;
+    	}
+    	.footer {
+    		background-color: #f5f5f5; 
+    	}
+    	.footer > .container {
+    		padding-right: 15px;
+    		padding-left: 15px
+    	}
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+<header class="app-header navbar">
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="{{ path('home') }}">App</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toogle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" active>
+						<a class="nav-link" href="{{ path('home') }}">HOME</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>	
+</header>    
+<main class="main">
+    {% block breadcrumbs %}{% endblock %}
+    <div class="container">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">© All rights reserved</span>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>	
+
+{% block javascripts %}
+{% endblock %}
+</body>
 </html>
