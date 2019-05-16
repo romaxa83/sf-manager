@@ -65,12 +65,15 @@ class Handler
 		}
 
 		$user = new User(
-			Id::next(),
-			new \DateTimeImmutable(),
-			$email,
-			$this->passwordHasher->hash($command->password),
+		    Id::next(),
+            new \DateTimeImmutable()
+        );
+
+		$user->signUpByEmail(
+		    $email,
+            $this->passwordHasher->hash($command->password),
             $token = $this->confirmTokenizer->generate()
-		);
+        );
 
 		$this->userRepository->add($user);
 
