@@ -59,4 +59,9 @@ class UserRepository
     {
         return true;
     }
+
+    public function get(Id $id)
+    {
+
+    }
 }

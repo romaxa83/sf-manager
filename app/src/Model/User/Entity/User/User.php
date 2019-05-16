@@ -53,43 +53,52 @@ class User
      */
     private $resetToken;
 
-	public function __construct(
+    /**
+     * @var Role
+     */
+    private $role;
+
+	private function __construct(
 	    Id $id,
         \DateTimeImmutable $date
     )
 	{
 		$this->id = $id;
 		$this->date = $date;
-		$this->status = self::STATUS_NEW;
+		$this->role = Role::user();
 		$this->networks = new ArrayCollection();
 	}
 
-    public function signUpByEmail(
+    public static function signUpByEmail(
+        Id $id,
+        \DateTimeImmutable $date,
         Email $email,
         string $hash,
         string $token
-    ): void
+    ): User
     {
-        if(!$this->isNew()){
-            throw new \DomainException('User is already signed up.');
-        }
+        $user = new self($id,$date);
+        $user->email = $email;
+        $user->passwordHash = $hash;
+        $user->confirmToken = $token;
+        $user->status = self::STATUS_WAIT;
 
-        $this->email = $email;
-        $this->passwordHash = $hash;
-        $this->confirmToken = $token;
-        $this->status = self::STATUS_WAIT;
+        return $user;
     }
 
-    public function signUpByNetwork(
+    public static function signUpByNetwork(
+        Id $id,
+        \DateTimeImmutable $date,
         string $network,
         string $networkId
-    ): void
+    ): User
     {
-        if(!$this->isNew()){
-            throw new \DomainException('User is already signed up.');
-        }
-        $this->attachNetwork($network, $networkId);
-        $this->status = self::STATUS_ACTIVE;
+
+        $user = new self($id,$date);
+        $user->attachNetwork($network, $networkId);
+        $user->status = self::STATUS_ACTIVE;
+
+        return $user;
     }
 
     private function attachNetwork(string $network, string $networkId): void
@@ -152,6 +161,14 @@ class User
         $this->resetToken = null;
     }
 
+    public function changeRole(Role $role): void
+    {
+        if($this->role->isEqual($role)){
+            throw new \DomainException('Role is already same.');
+        }
+
+        $this->role = $role;
+    }
     /**
      * @return null|string
      */
@@ -206,5 +223,13 @@ class User
     public function getNetworks(): array
     {
         return $this->networks->toArray();
+    }
+
+    /**
+     * @return Role
+     */
+    public function getRole(): Role
+    {
+        return $this->role;
     }
 }

@@ -13,12 +13,9 @@ class RequestTest extends TestCase
 {
 	public function testSuccess(): void
 	{
-	    $user = new User(
-	        $id = Id::next(),
-            $date = new \DateTimeImmutable()
-        );
-
-		$user->signUpByEmail(
+		$user = User::signUpByEmail(
+            $id = Id::next(),
+            $date = new \DateTimeImmutable(),
 			$email = new Email('test@test.com'),
 			$hash = 'hash',
             $token = 'token'
@@ -32,5 +29,7 @@ class RequestTest extends TestCase
 		self::assertEquals($email, $user->getEmail());
 		self::assertEquals($hash, $user->getPasswordHash());
 		self::assertEquals($token, $user->getConfirmToken());
+
+		self::assertTrue($user->getRole()->isUser());
 	}
 }
