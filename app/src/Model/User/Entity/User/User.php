@@ -6,7 +6,13 @@ namespace App\Model\User\Entity\User;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Zend\EventManager\Exception\DomainException;
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ * @ORM\Table(name="user_users")
+ */
 class User
 {
     private const STATUS_WAIT = 'wait';
@@ -15,46 +21,56 @@ class User
 
 	/**
 	 * @var Id
+     * @ORM\Column(type="user_user_id")
+     * @ORM\Id
 	 */
 	private $id;
 
 	/**
-	 * @var \DateTimeImmutable 
+	 * @var \DateTimeImmutable
+     * @ORM\Column(type="datetime_immutable")
 	 */
 	private $date;
 
-	/**
+    /**
 	 * @var Email
+     * @ORM\Column(type="user_user_email", nullable=true)
 	 */
 	private $email;
 
-	/**
-	 * @var string 
-	 */
-	private $passwordHash;
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, name="password_hash")
+     */
+    private $passwordHash;
 
     /**
      * @var string|null
+     * @ORM\Column(type="string", nullable=true, name="confirm_token")
      */
     private $confirmToken;
 
     /**
      * @var string
+     * @ORM\Column(type="string", length=16)
      */
     private $status;
 
     /**
      * @var Network[]|ArrayCollection
+     * @ORM\OneToMany(targetEntity="Network", mappedBy="user", orphanRemoval=true, cascade={"persist"})
      */
     private $networks;
 
     /**
      * @var ResetToken|null
+     * @ORM\Embedded(class="ResetToken", columnPrefix="reset_token_")
      */
     private $resetToken;
 
     /**
      * @var Role
+     * @ORM\Column(type="user_user_role")
      */
     private $role;
 
@@ -231,5 +247,17 @@ class User
     public function getRole(): Role
     {
         return $this->role;
+    }
+
+    /**
+     * метод отработает после загрузки данных в обьект
+     * проверяем на наличие resetToken
+     * @ORM\PostLoad()
+     */
+    public function checkEmbeds(): void
+    {
+        if($this->resetToken->isEmpty()){
+            $this->resetToken = null;
+        }
     }
 }

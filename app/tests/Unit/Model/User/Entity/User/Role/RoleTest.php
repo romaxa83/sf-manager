@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Model\User\Entity\User\Role;
 
-use App\Model\User\Entity\User\Id;
-use App\Model\User\Entity\User\Network;
 use App\Model\User\Entity\User\Role;
 use App\Model\User\Entity\User\User;
 use App\Tests\Builder\User\UserBuilder;
