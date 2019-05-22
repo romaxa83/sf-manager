@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace App\Model\User\Entity\User;
 
+use App\Model\EntityNotFoundException;
 use Doctrine\ORM\EntityManagerInterface;
-use Facebook\WebDriver\Exception\UnknownServerException;
 
 class UserRepository
 {
     private $em;
-
     /**
      * @var \Doctrine\ORM\EntityRepository
      */
@@ -31,9 +30,31 @@ class UserRepository
         return $this->repo->findOneBy(['confirmToken' => $token]);
     }
 
-    public function indByResetToken(string $token): ?User
+    /**
+     * @param string $token
+     * @return User|object|null
+     */
+    public function findByResetToken(string $token): ?User
     {
+        return $this->repo->findOneBy(['resetToken.token' => $token]);
+    }
 
+    public function get(Id $id): User
+    {
+        /** @var User $user */
+        if (!$user = $this->repo->find($id->getValue())) {
+            throw new EntityNotFoundException('User is not found.');
+        }
+        return $user;
+    }
+
+    public function getByEmail(Email $email): User
+    {
+        /** @var User $user */
+        if (!$user = $this->repo->findOneBy(['email' => $email->getValue()])) {
+            throw new EntityNotFoundException('User is not found.');
+        }
+        return $user;
     }
 
     public function hasByEmail(Email $email): bool
@@ -45,23 +66,19 @@ class UserRepository
                 ->getQuery()->getSingleScalarResult() > 0;
     }
 
-    public function getByEmail(Email $email)
+    public function hasByNetworkIdentity(string $network, string $identity): bool
     {
-
+        return $this->repo->createQueryBuilder('t')
+                ->select('COUNT(t.id)')
+                ->innerJoin('t.networks', 'n')
+                ->andWhere('n.network = :network and n.identity = :identity')
+                ->setParameter(':network', $network)
+                ->setParameter(':identity', $identity)
+                ->getQuery()->getSingleScalarResult() > 0;
     }
 
     public function add(User $user): void
     {
         $this->em->persist($user);
-    }
-
-    public function hasByNetworkId($network,$networkId):bool
-    {
-        return true;
-    }
-
-    public function get(Id $id)
-    {
-
     }
 }

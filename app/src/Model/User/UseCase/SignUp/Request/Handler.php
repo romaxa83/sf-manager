@@ -44,7 +44,6 @@ class Handler
         Flusher $flusher
     )
 	{
-
         $this->userRepository = $userRepository;
         $this->passwordHasher = $passwordHasher;
         $this->flusher = $flusher;

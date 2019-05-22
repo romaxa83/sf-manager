@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="user_user_networks", uniqueConstraints={
- *     @ORM\UniqueConstraint(columns={"network", "identity"})
+ *     @ORM\UniqueConstraint(columns={"network", "network_id"})
  * })
  */
 class Network
@@ -36,7 +36,7 @@ class Network
 
     /**
      * @var string
-     * @ORM\Column(type="string", length=32, nullable=true)
+     * @ORM\Column(name="network_id", type="string", length=32, nullable=true)
      */
     private $networkId;
 

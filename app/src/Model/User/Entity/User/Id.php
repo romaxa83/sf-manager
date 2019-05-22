@@ -34,6 +34,10 @@ class Id
         return $this->value;
     }
 
+    /**
+     * переводим id в строку для doctrine
+     * @return string
+     */
     public function __toString()
     {
         return $this->getValue();

@@ -40,10 +40,14 @@
 			</div>
 		</div>
 	</nav>	
-</header>    
+</header>
 <main class="main">
-    {% block breadcrumbs %}{% endblock %}
     <div class="container">
+		{# подключаем хлебные крошки #}
+        {% block breadcrumbs %}{% endblock %}
+		{# подключаем флеш сообщение #}
+		{% include'_flashes.html.twig' %}
+		{# главные контент #}
         {% block body %}{% endblock %}
     </div>
 </main>
