@@ -13,7 +13,6 @@ use App\Model\User\Service\ResetTokenSender;
 
 class Handler
 {
-
     /**
      * @var UserRepository
      */

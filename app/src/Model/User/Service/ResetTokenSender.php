@@ -10,7 +10,13 @@ use Twig\Environment;
 
 class ResetTokenSender
 {
+    /**
+     * @var \Swift_Mailer
+     */
     private $mailer;
+    /**
+     * @var Environment
+     */
     private $twig;
 
     public function __construct(\Swift_Mailer $mailer, Environment $twig)
@@ -19,6 +25,13 @@ class ResetTokenSender
         $this->twig = $twig;
     }
 
+    /**
+     * @param Email $email
+     * @param ResetToken $token
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
     public function send(Email $email, ResetToken $token): void
     {
         $message = (new \Swift_Message('Password resetting'))
@@ -26,6 +39,7 @@ class ResetTokenSender
             ->setBody($this->twig->render('mail/user/reset.html.twig', [
                 'token' => $token->getToken()
             ]), 'text/html');
+
         if (!$this->mailer->send($message)) {
             throw new \RuntimeException('Unable to send message.');
         }

@@ -9,9 +9,11 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-cache-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
@@ -25,6 +27,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facebook/webdriver" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
@@ -116,9 +119,11 @@
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/collections" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/app/vendor/doctrine/data-fixtures" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/dbal" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/event-manager" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
@@ -132,6 +137,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
           <root url="file://$MODULE_DIR$/app/vendor/facebook/webdriver" />
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
@@ -219,9 +225,11 @@
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/collections" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/app/vendor/doctrine/data-fixtures" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/dbal" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/event-manager" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
@@ -235,6 +243,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
           <root url="file://$MODULE_DIR$/app/vendor/facebook/webdriver" />
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />

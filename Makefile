@@ -44,3 +44,6 @@ doctrine-diff:
 
 doctrine-migrate:
 	docker-compose run --rm app-php-cli php bin/console doctrine:migrations:migrate --no-interaction
+
+load-fixture:
+	docker-compose run --rm app-php-cli php bin/console doctrine:fixtures:load --no-interaction

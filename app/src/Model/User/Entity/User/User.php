@@ -15,9 +15,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User
 {
-    private const STATUS_WAIT = 'wait';
-    private const STATUS_ACTIVE = 'active';
-    private const STATUS_NEW = 'new';
+    public const STATUS_WAIT = 'wait';
+    public const STATUS_ACTIVE = 'active';
+    public const STATUS_NEW = 'new';
 
 	/**
 	 * @var Id

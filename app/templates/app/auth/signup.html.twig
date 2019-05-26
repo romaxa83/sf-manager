@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block body %}
+    <h1>Регистрация</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Регистрация</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

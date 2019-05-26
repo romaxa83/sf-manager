@@ -47,11 +47,16 @@ services:
         depends_on:
             - app-postgres
         ports:
-            - "5555:80"
+            - "8082:80"
         environment:
             PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
             PGADMIN_DEFAULT_PASSWORD: admin
         restart: unless-stopped
+
+    mailer:
+        image: mailhog/mailhog
+        ports:
+            - "8081:8025"
 
 volumes:
     composer:  
