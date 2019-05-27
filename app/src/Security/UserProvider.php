@@ -42,8 +42,8 @@ class UserProvider implements UserProviderInterface
             throw new UnsupportedUserException('Invalid user class ' . \get_class($identity));
         }
 
-        $user = $this->loadUser($username);
-        return self::identityByUser($user, $username);
+        $user = $this->loadUser($identity->getUsername());
+        return self::identityByUser($user, $identity->getUsername());
     }
 
     public function supportsClass($class): bool
