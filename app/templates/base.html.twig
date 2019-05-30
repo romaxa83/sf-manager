@@ -33,15 +33,21 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item" active>
-						<a class="nav-link" href="{{ path('home') }}">HOME</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ path('auth.signup') }}">Sign Up</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ path('auth.reset') }}">Reset</a>
-					</li>
+                    {% if is_granted('ROLE_USER') %}
+						<li class="nav-item text-nowrap">
+							<a class="nav-link" href="{{ path('app_logout') }}">{{ app.user.username }}</a>
+						</li>
+					{% else %}
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('home') }}">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('auth.signup') }}">Sign Up</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('auth.reset') }}">Reset</a>
+						</li>
+                    {% endif %}
 				</ul>
 			</div>
 		</div>

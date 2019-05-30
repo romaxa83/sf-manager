@@ -42,6 +42,13 @@ services:
         ports: 
             - "54321:5432"
 
+    app-nodejs:
+            image: node:10.11-jessie
+            volumes:
+                - ./app:/var/www/app
+            working_dir: /var/www/app
+            tty: true  #позволяет процесу nodejs висеть постояно
+
     pgadmin:
         image: dpage/pgadmin4
         depends_on:
