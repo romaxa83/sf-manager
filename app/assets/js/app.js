@@ -1,6 +1,7 @@
 require('../css/app.scss');
 
 require('bootstrap');
+require('@coreui/coreui');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');

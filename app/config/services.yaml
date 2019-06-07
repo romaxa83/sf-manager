@@ -41,3 +41,6 @@ services:
     App\Model\User\Service\ResetTokenizer:
         factory: 'App\Container\Model\User\Service\ResetTokenizerFactory:create'
         arguments: ['PT1H']
+    # определяем боковое меню
+    App\Menu\SidebarMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: sidebar}]

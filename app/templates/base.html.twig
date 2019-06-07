@@ -11,36 +11,61 @@
     {% endblock %}
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+{#<header class="app-header navbar">#}
+	{#<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">#}
+		{#<div class="container">#}
+			{#<a class="navbar-brand" href="{{ path('home') }}">App</a>#}
+			{#<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toogle navigation">#}
+				{#<span class="navbar-toggler-icon"></span>#}
+			{#</button>#}
+			{#<div class="collapse navbar-collapse" id="navbarCollapse">#}
+				{#<ul class="navbar-nav ml-auto">#}
+                    {#{% if is_granted('ROLE_USER') %}#}
+						{#<li class="nav-item text-nowrap">#}
+							{#<a class="nav-link" href="{{ path('app_logout') }}">{{ app.user.username }}</a>#}
+						{#</li>#}
+					{#{% else %}#}
+						{#<li class="nav-item">#}
+							{#<a class="nav-link" href="{{ path('home') }}">HOME</a>#}
+						{#</li>#}
+						{#<li class="nav-item">#}
+							{#<a class="nav-link" href="{{ path('auth.signup') }}">Sign Up</a>#}
+						{#</li>#}
+						{#<li class="nav-item">#}
+							{#<a class="nav-link" href="{{ path('auth.reset') }}">Reset</a>#}
+						{#</li>#}
+                    {#{% endif %}#}
+				{#</ul>#}
+			{#</div>#}
+		{#</div>#}
+	{#</nav>	#}
+{#</header>#}
 <header class="app-header navbar">
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<div class="container">
-			<a class="navbar-brand" href="{{ path('home') }}">App</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toogle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav ml-auto">
-                    {% if is_granted('ROLE_USER') %}
-						<li class="nav-item text-nowrap">
-							<a class="nav-link" href="{{ path('app_logout') }}">{{ app.user.username }}</a>
-						</li>
-					{% else %}
-						<li class="nav-item">
-							<a class="nav-link" href="{{ path('home') }}">HOME</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ path('auth.signup') }}">Sign Up</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ path('auth.reset') }}">Reset</a>
-						</li>
-                    {% endif %}
-				</ul>
+	<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<ul class="nav navbar-nav ml-auto mr-4">
+		<li class="nav-item dropdown">
+			<div class="dropdown-menu dropdown-menu-right">
+				<div class="dropdown-header text-center">
+					<strong>Account</strong>
+				</div>
+				<a class="dropdown-item" href="{{ path('app_logout') }}"><i class="fa fa-lock"></i> Logout</a>
 			</div>
-		</div>
-	</nav>	
+		</li>
+	</ul>
 </header>
 <div class="app-body">
+	{# боковое меню #}
+	<div class="sidebar">
+		<nav class="sidebar-nav">
+            {{ knp_menu_render('sidebar', {'currentClass': 'active'}) }}
+		</nav>
+		<button class="sidebar-minimizer brand-minimizer" type="button"></button>
+	</div>
 	<main class="main">
 		<div class="container">
             {# подключаем хлебные крошки #}
@@ -54,7 +79,7 @@
 </div>
 
 <footer class="app-footer">
-	<div>
+	<div class="container-fluid">
 		<span>© {{ "now"|date("Y") }} All rights reserved</span>
 	</div>
 </footer>

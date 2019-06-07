@@ -7,6 +7,7 @@
         "ext-iconv": "*",
         "doctrine/doctrine-fixtures-bundle": "^3.1",
         "finesse/swiftmailer-defaults-plugin": "^2.0",
+        "knplabs/knp-menu-bundle": "dev-master",
         "ramsey/uuid": "^3.8",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.2.*",

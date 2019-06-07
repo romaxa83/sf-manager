@@ -29,6 +29,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ocramius/package-versions" />
@@ -65,6 +67,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/flex" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/form" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/framework-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/inflector" />
@@ -80,6 +83,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/profiler-pack" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/property-access" />
@@ -140,6 +144,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
           <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
           <root url="file://$MODULE_DIR$/app/vendor/ocramius/package-versions" />
@@ -176,6 +182,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/flex" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/form" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/framework-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/symfony/http-client" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/http-foundation" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/http-kernel" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/inflector" />
@@ -191,6 +198,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-idn" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php72" />
+          <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/process" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/profiler-pack" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/property-access" />
@@ -247,6 +255,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
           <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
           <root url="file://$MODULE_DIR$/app/vendor/ocramius/package-versions" />
@@ -283,6 +293,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/flex" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/form" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/framework-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/symfony/http-client" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/http-foundation" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/http-kernel" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/inflector" />
@@ -298,6 +309,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-idn" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php72" />
+          <root url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/process" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/profiler-pack" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/property-access" />

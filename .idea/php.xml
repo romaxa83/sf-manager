@@ -107,6 +107,10 @@
       <path value="$PROJECT_DIR$/app/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-menu" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
