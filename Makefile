@@ -47,3 +47,21 @@ doctrine-migrate:
 
 load-fixture:
 	docker-compose run --rm app-php-cli php bin/console doctrine:fixtures:load --no-interaction
+
+#для работа с webpack
+webpack-init:
+	docker-compose run --rm app-php-cli composer require encore
+	sudo chmod 777 -R assets
+	sudo chmod 777 package.json
+	sudo chmod 777 webpack.config.js
+
+npm-install:
+	docker-compose run --rm app-nodejs npm install
+
+webpack-build:
+	docker-compose run --rm app-nodejs ./node_modules/.bin/encore dev
+
+webpack-watch:
+	docker-compose run --rm app-nodejs ./node_modules/.bin/encore dev --watch
+
+

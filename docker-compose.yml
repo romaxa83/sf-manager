@@ -48,7 +48,6 @@ services:
                 - ./app:/var/www/app
             working_dir: /var/www/app
             tty: true  #позволяет процесу nodejs висеть постояно
-
     pgadmin:
         image: dpage/pgadmin4
         depends_on:

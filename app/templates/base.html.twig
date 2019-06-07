@@ -6,24 +6,11 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     <!-- Custom styles for this template -->
 
-	{% block stylesheets %}
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	{% endblock %}
-
-    <style>
-    	main > .container {
-    		padding: 80px 15px 0;
-    	}
-    	.footer {
-    		background-color: #f5f5f5; 
-    	}
-    	.footer > .container {
-    		padding-right: 15px;
-    		padding-left: 15px
-    	}
-    </style>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 </head>
-<body class="d-flex flex-column h-100">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <header class="app-header navbar">
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<div class="container">
@@ -53,28 +40,27 @@
 		</div>
 	</nav>	
 </header>
-<main class="main">
-    <div class="container">
-		{# подключаем хлебные крошки #}
-        {% block breadcrumbs %}{% endblock %}
-		{# подключаем флеш сообщение #}
-		{% include'_flashes.html.twig' %}
-		{# главные контент #}
-        {% block body %}{% endblock %}
-    </div>
-</main>
+<div class="app-body">
+	<main class="main">
+		<div class="container">
+            {# подключаем хлебные крошки #}
+            {% block breadcrumbs %}{% endblock %}
+            {# подключаем флеш сообщение #}
+            {% include'_flashes.html.twig' %}
+            {# главные контент #}
+            {% block body %}{% endblock %}
+		</div>
+	</main>
+</div>
 
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <span class="text-muted">© All rights reserved</span>
-    </div>
+<footer class="app-footer">
+	<div>
+		<span>© {{ "now"|date("Y") }} All rights reserved</span>
+	</div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js" crossorigin="anonymous"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>	
-
 {% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
 {% endblock %}
 </body>
 </html>
