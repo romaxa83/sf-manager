@@ -31,7 +31,8 @@ class SidebarMenu
             ->setAttribute('class', 'nav-item')
             ->setLinkAttribute('class', 'nav-link');
 
-        $menu->addChild('Work')->setAttribute('class', 'nav-title')
+        $menu->addChild('Blog')
+            ->setAttribute('class', 'nav-title')
             ->setExtra('icon', 'nav-icon icon-people');
 //        $menu->addChild('Projects', ['route' => 'work.projects'])
 //            ->setExtra('routes', [
