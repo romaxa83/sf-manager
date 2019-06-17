@@ -32,3 +32,9 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Model/User/Entity'
                 prefix: 'App\Model\User\Entity'
                 alias: User
+            BlogCategory:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Model/Blog/Entity/Category'
+                prefix: 'App\Model\Blog\Entity\Category'
+                alias: BlogCategory

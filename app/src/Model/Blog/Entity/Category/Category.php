@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @Gedmo\Tree(type="nested")
+ * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  * @ORM\Table(name="blog_categories")
  */
@@ -19,9 +19,9 @@ class Category
     public const STATUS_INACTIVE = 0;
 
     /**
-     * @ORM\Column(type="blog_category_id")
-     * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
     private $id;
 
@@ -31,51 +31,14 @@ class Category
     private $title;
 
     /**
-     * @Gedmo\Translatable
      * @Gedmo\Slug(fields={"title"})
-     * @ORM\Column(length=64, unique=true)
+     * @ORM\Column(name="slug", nullable=false, length=64, unique=true)
      */
     private $slug;
 
     /**
-     * @Gedmo\TreeLeft
-     * @ORM\Column(name="lft", type="integer")
-     */
-    private $lft;
-
-    /**
-     * @Gedmo\TreeLevel
-     * @ORM\Column(name="level", type="integer")
-     */
-    private $level;
-
-    /**
-     * @Gedmo\TreeRight
-     * @ORM\Column(name="rgt", type="integer")
-     */
-    private $rgt;
-
-    /**
-     * @Gedmo\TreeParent
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
-     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
-     */
-    private $parent;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
-     */
-    private $children;
-
-    /**
-     * @Gedmo\TreeRoot
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $root;
-
-    /**
      * @var string
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $status;
 
@@ -88,6 +51,19 @@ class Category
     public function __construct()
     {
         $this->children = new ArrayCollection();
+    }
+
+    public function create(
+        string $title,\DateTimeImmutable $date)
+    {
+        $this->title = $title;
+        $this->status = self::STATUS_ACTIVE;
+        $this->created = $date;
+    }
+
+    public function edit($title)
+    {
+        $this->title = $title;
     }
 
     public function isActive(): bool
@@ -118,41 +94,6 @@ class Category
     public function getTitle()
     {
         return $this->title;
-    }
-
-    public function setParent($parent)
-    {
-        $this->parent = $parent;
-    }
-
-    public function getParent()
-    {
-        return $this->parent;
-    }
-
-    public function getRoot()
-    {
-        return $this->root;
-    }
-
-    public function getLevel()
-    {
-        return $this->level;
-    }
-
-    public function getChildren()
-    {
-        return $this->children;
-    }
-
-    public function getLeft()
-    {
-        return $this->lft;
-    }
-
-    public function getRight()
-    {
-        return $this->rgt;
     }
 
     public function __toString()

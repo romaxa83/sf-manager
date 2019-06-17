@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Blog's Category{% endblock %}
+
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('home') }}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ path('blog.category.index') }}">Category</a>
+        </li>
+        <li class="breadcrumb-item active">Edit</li>
+
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-settings"></i> &nbsp;Settings</a>
+            </div>
+        </li>
+    </ol>
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Edit</strong> Category</div>
+        <div class="card-body">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-primary" type="submit">
+                <i class="fa fa-dot-circle-o"></i> Submit</button>
+            <button class="btn btn-sm btn-danger" type="reset">
+                <i class="fa fa-ban"></i> Reset</button>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

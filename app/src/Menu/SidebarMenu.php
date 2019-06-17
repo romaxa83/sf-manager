@@ -33,7 +33,8 @@ class SidebarMenu
 
         $menu->addChild('Blog')
             ->setAttribute('class', 'nav-title')
-            ->setExtra('icon', 'nav-icon icon-people');
+            ->setExtra('icon', 'nav-icon icon-pencil')
+            ->addChild('Category',['route' => 'blog.category.index']);
 //        $menu->addChild('Projects', ['route' => 'work.projects'])
 //            ->setExtra('routes', [
 //                ['route' => 'work.projects'],

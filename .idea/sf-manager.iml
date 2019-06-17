@@ -47,6 +47,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
@@ -164,6 +165,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
@@ -277,6 +279,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
