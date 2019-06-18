@@ -67,12 +67,43 @@ main {
   }
 }
 
-.app-footer {
-  color: royalblue;
-  background: $body-bg;
+pre {
+  padding: 9.5px;
+  margin-bottom: 1rem;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f6f6f6;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+}
 
-  & > .container {
-    padding-right: 15px;
-    padding-left: 15px;
+.table.calendar > tbody > tr > td {
+  padding: 0;
+  vertical-align: top;
+
+  &.muted {
+    background: #f6f6f6;
+  }
+
+  .day {
+    min-height: 100px;
+    padding: 0 4px;
+
+    .item {
+      background: #ffffdd;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin: 4px 0;
+      padding: 8px;
+
+      .header {
+        margin-bottom: 4px;
+      }
+
+      .link {
+        line-height: 1.2;
+      }
+    }
   }
 }

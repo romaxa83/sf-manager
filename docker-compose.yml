@@ -19,6 +19,9 @@ services:
             APP_DEBUG: 1    
         volumes:
             - ./app:/var/www/app
+        depends_on:
+          - app-postgres
+          - app-redis
 
     app-php-cli:
         build:
@@ -30,6 +33,9 @@ services:
             - ./app:/var/www/app
             - composer:/root/.composer/cache #кешируем данные composer
         working_dir: /var/www/app
+        depends_on:
+          - app-postgres
+          - app-redis
 
     app-postgres: 
         image: postgres:11.2-alpine
@@ -64,5 +70,12 @@ services:
         ports:
             - "8081:8025"
 
+    app-redis:
+        image: redis:3.0-alpine
+        volumes:
+            - ./app:/data
+        command: redis-server --requirepass secret
+
 volumes:
     composer:  
+    app-redis:

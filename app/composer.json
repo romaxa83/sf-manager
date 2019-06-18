@@ -9,6 +9,7 @@
         "finesse/swiftmailer-defaults-plugin": "^2.0",
         "gedmo/doctrine-extensions": "^2.4",
         "knplabs/knp-menu-bundle": "dev-master",
+        "predis/predis": "^1.1",
         "ramsey/uuid": "^3.8",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.2.*",

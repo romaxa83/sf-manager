@@ -1,14 +1,45 @@
-{% extends 'base.html.twig' %}
+{% extends 'auth.html.twig' %}
 
-{% block title %}Регистрация{% endblock %}
+{% block title %}Sign Up{% endblock %}
 
 {% block body %}
-    <h1>Регистрация</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mx-4">
+                    <div class="card-body p-4">
+                        {% include '_flashes.html.twig' %}
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Регистрация</button>
+                        <h1>Sign Up</h1>
+
+                        <p class="text-muted">Create your account</p>
+
+                        {{ form_start(form) }}
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            {{ form_widget(form.email, {'attr': {'placeholder': 'Email'}}) }}
+                            {{ form_errors(form.email) }}
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-lock"></i>
+                                </span>
+                            </div>
+                            {{ form_widget(form.password, {'attr': {'placeholder': 'Password'}}) }}
+                            {{ form_errors(form.password) }}
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-success">Create Account</button>
+                        <a class="btn btn-block btn-success" href="{{ path('app_login') }}">Login</a>
+
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    {{ form_end(form) }}
 {% endblock %}
