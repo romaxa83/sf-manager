@@ -15,4 +15,10 @@ class Command
      * @var string
      */
     public $networkId;
+
+    public function __construct(string $network, string $networkId)
+    {
+        $this->network = $network;
+        $this->networkId = $networkId;
+    }
 }

@@ -114,6 +114,15 @@
       <path value="$PROJECT_DIR$/app/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/app/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/app/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth2-facebook" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -51,4 +51,28 @@ class UserFetcher
 
         return $result ?: null;
     }
+
+    public function findForAuthByNetwork(string $network, string $identity): ?AuthView
+    {
+        $stmt = $this->connection->createQueryBuilder()
+            ->select(
+                'u.id',
+                'u.email',
+                'u.password_hash',
+                'u.role',
+                'u.status'
+            )
+            ->from('user_users', 'u')
+            ->innerJoin('u','user_user_networks','n','n.user_id = u.id')
+            ->where('n.network = :network AND n.network_id =:identity')
+            ->setParameter(':network',$network)
+            ->setParameter(':identity',$identity)
+            ->execute();
+
+        //данные маппим в класс AuthView
+        $stmt->setFetchMode(FetchMode::CUSTOM_OBJECT,AuthView::class);
+        $result = $stmt->fetch();
+
+        return $result ?: null;
+    }
 }

@@ -1,12 +1,13 @@
 # Symfony4 with Docker
 
-#####Стартовый symfony-skeleton разворачиваемый на docker.
+####Тестовый проект.
 Стек:
   - Nginx
   - Php 7.2
   - Postgresql 11.2
   - PgAdmin
   - MailHog
+  - Redis
 #### Использование
 развертывание приложения.
 

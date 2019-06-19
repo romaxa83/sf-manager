@@ -66,12 +66,12 @@ class UserRepository
                 ->getQuery()->getSingleScalarResult() > 0;
     }
 
-    public function hasByNetworkIdentity(string $network, string $identity): bool
+    public function hasByNetworkId(string $network, string $identity): bool
     {
         return $this->repo->createQueryBuilder('t')
                 ->select('COUNT(t.id)')
                 ->innerJoin('t.networks', 'n')
-                ->andWhere('n.network = :network and n.identity = :identity')
+                ->andWhere('n.network = :network and n.networkId = :identity')
                 ->setParameter(':network', $network)
                 ->setParameter(':identity', $identity)
                 ->getQuery()->getSingleScalarResult() > 0;

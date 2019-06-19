@@ -53,6 +53,13 @@ class UserProvider implements UserProviderInterface
 
     private function loadUser($username): AuthView
     {
+        $chunk = explode(':', $username);
+
+        //если username после регистрации через соц. сеть
+        if(\count($chunk) === 2 && $user = $this->users->findForAuthByNetwork($chunk[0],$chunk[1])){
+            return $user;
+        }
+
         if ($user = $this->users->findForAuthByEmail($username)) {
             return $user;
         }
@@ -63,7 +70,7 @@ class UserProvider implements UserProviderInterface
     {
         return new UserIdentity(
             $user->id,
-            $user->email ?: $username,
+            $username,
             $user->password_hash ?: '',
             $user->role,
             $user->status

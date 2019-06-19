@@ -9,6 +9,8 @@
         "finesse/swiftmailer-defaults-plugin": "^2.0",
         "gedmo/doctrine-extensions": "^2.4",
         "knplabs/knp-menu-bundle": "dev-master",
+        "knpuniversity/oauth2-client-bundle": "^1.28",
+        "league/oauth2-facebook": "^2.0",
         "predis/predis": "^1.1",
         "ramsey/uuid": "^3.8",
         "sensio/framework-extra-bundle": "^5.1",
