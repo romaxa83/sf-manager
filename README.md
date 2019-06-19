@@ -1,6 +1,6 @@
 # Symfony4 with Docker
 
-####Тестовый проект.
+#### Тестовый проект.
 Стек:
   - Nginx
   - Php 7.2
@@ -31,7 +31,7 @@ $ docker-compose run --rm app-php-cli php bin/console <command>
 используеться **postgesql**
 
 pgadmin доступна по адресу http://localhost:8082
-вход
+
 - login : ***pgadmin4@pgadmin.org***
 - password : ***admin***
 
@@ -47,3 +47,11 @@ pgadmin доступна по адресу http://localhost:8082
 используеться mailhog (для разработки)
 
 доступен по адресу http://localhost:8081
+
+#### Описани
+
+- после загрузки фикстур можно зайти под админом
+(login:admin@admin.com;password:password)
+данные пользователя при авторизации сохраняються в хранилище redis
+
+- или зарегестрироваться (будет роль пользователя),а затем в консоли изменить роль на адми
