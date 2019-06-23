@@ -27,13 +27,14 @@
 
 		<li class="nav-item dropdown">
 			<a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-				{{ app.user.username }}
+				{{ app.user.fullName }}
 			</a>
 			<div class="dropdown-menu dropdown-menu-right">
-
-				<a class="dropdown-item" href="{{ path('app_logout') }}">
-					<i class="fa fa-lock"></i> Logout
-				</a>
+				<div class="dropdown-header text-center">
+					<strong>Account</strong>
+				</div>
+				<a class="dropdown-item" href="{{ path('profile') }}"><i class="fa fa-user"></i> Profile</a>
+				<a class="dropdown-item" href="{{ path('app_logout') }}"><i class="fa fa-lock"></i> Logout</a>
 			</div>
 		</li>
 	</ul>

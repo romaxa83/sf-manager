@@ -50,6 +50,9 @@ services:
     Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler:
         arguments:
             - '@Predis\Client'
+    App\Widget\:
+        resource: '../src/Widget'
+        tags: ['twig.extension']
     # определяем боковое меню
     App\Menu\SidebarMenu:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: sidebar}]

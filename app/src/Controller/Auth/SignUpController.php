@@ -4,11 +4,15 @@ declare(strict_types=1);
 namespace App\Controller\Auth;
 
 use App\Model\User\UseCase\SignUp;
+use App\ReadModel\User\UserFetcher;
+use App\Security\LoginFormAuthenticator;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
+use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
 class SignUpController extends AbstractController
 {
@@ -16,10 +20,15 @@ class SignUpController extends AbstractController
      * @var LoggerInterface
      */
     private $logger;
+    /**
+     * @var UserFetcher
+     */
+    private $userFetcher;
 
-    public function __construct(LoggerInterface $logger)
+    public function __construct(UserFetcher $userFetcher, LoggerInterface $logger)
     {
         $this->logger = $logger;
+        $this->userFetcher = $userFetcher;
     }
 
     /**
@@ -54,20 +63,42 @@ class SignUpController extends AbstractController
 
     /**
      * @Route("/signup/{token}", name="auth.signup.confirm")
+     *  @param Request $request
      * @param string $token
      * @param SignUp\Confirm\Handler $handler
+     * @param UserProviderInterface $userProvider
+     * @param GuardAuthenticatorHandler $guardHandler
+     * @param LoginFormAuthenticator $authenticator
      * @return Response
-     * @throws \Exception
      */
-    public function confirm(string $token, SignUp\Confirm\Handler $handler): Response
+    public function confirm(
+        Request $request,
+        string $token,
+        SignUp\Confirm\Handler $handler,
+        UserProviderInterface $userProvider,
+        GuardAuthenticatorHandler $guardHandler,
+        LoginFormAuthenticator $authenticator
+    ): Response
     {
+        if(!$user = $this->userFetcher->findBySignUpConfirmToken($token)) {
+            $this->addFlash('error', 'Incorrect or already confirmed token.');
+
+            return $this->redirectToRoute('auth.signup');
+        }
+
         $command = new SignUp\Confirm\Command($token);
 
         try{
             $handler->handle($command);
             $this->addFlash('success','Почта потвержденна');
 
-            return $this->redirectToRoute('home');
+            //сразу логиним пользователя
+            return $guardHandler->authenticateUserAndHandleSuccess(
+                $userProvider->loadUserByUsername($user->email),
+                $request,
+                $authenticator,
+                'main'//указываем firewall из security.yml
+            );
         } catch (\DomainException $e){
             $this->logger->error($e->getMessage(), ['exception' => $e]);
             $this->addFlash('error',$e->getMessage());

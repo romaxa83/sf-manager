@@ -45,6 +45,9 @@ doctrine-diff:
 doctrine-migrate:
 	docker-compose run --rm app-php-cli php bin/console doctrine:migrations:migrate --no-interaction
 
+doctrine-permission:
+	sudo chmod 777 -R app/var
+
 load-fixture:
 	docker-compose run --rm app-php-cli php bin/console doctrine:fixtures:load --no-interaction
 
@@ -64,4 +67,8 @@ webpack-build:
 webpack-watch:
 	docker-compose run --rm app-nodejs ./node_modules/.bin/encore dev --watch
 
+confirm-user:
+	docker-compose run --rm app-php-cli php bin/console user:confirm
 
+change-role:
+	docker-compose run --rm app-php-cli php bin/console user:role

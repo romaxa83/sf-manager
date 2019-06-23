@@ -50,10 +50,28 @@ class User
     private $confirmToken;
 
     /**
+     * @var Email|null
+     * @ORM\Column(type="user_user_email", nullable=true, name="new_email")
+     */
+    private $newEmail;
+
+    /**
+     * @var Email|null
+     * @ORM\Column(type="string", nullable=true, name="new_email_token")
+     */
+    private $newEmailToken;
+
+    /**
      * @var string
      * @ORM\Column(type="string", length=16)
      */
     private $status;
+
+    /**
+     * @var Name
+     * @ORM\Embedded(class="Name")
+     */
+    private $name;
 
     /**
      * @var Network[]|ArrayCollection
@@ -75,11 +93,13 @@ class User
 
 	private function __construct(
 	    Id $id,
-        \DateTimeImmutable $date
+        \DateTimeImmutable $date,
+        Name $name
     )
 	{
 		$this->id = $id;
 		$this->date = $date;
+		$this->name = $name;
 		$this->role = Role::user();
 		$this->networks = new ArrayCollection();
 	}
@@ -87,12 +107,13 @@ class User
     public static function signUpByEmail(
         Id $id,
         \DateTimeImmutable $date,
+        Name $name,
         Email $email,
         string $hash,
         string $token
     ): User
     {
-        $user = new self($id,$date);
+        $user = new self($id, $date, $name);
         $user->email = $email;
         $user->passwordHash = $hash;
         $user->confirmToken = $token;
@@ -104,19 +125,20 @@ class User
     public static function signUpByNetwork(
         Id $id,
         \DateTimeImmutable $date,
+        Name $name,
         string $network,
         string $networkId
     ): User
     {
 
-        $user = new self($id,$date);
+        $user = new self($id, $date, $name);
         $user->attachNetwork($network, $networkId);
         $user->status = self::STATUS_ACTIVE;
 
         return $user;
     }
 
-    private function attachNetwork(string $network, string $networkId): void
+    public function attachNetwork(string $network, string $networkId): void
     {
         foreach ($this->networks as $existing) {
             if ($existing->isForNetwork($network)) {
@@ -184,6 +206,37 @@ class User
 
         $this->role = $role;
     }
+
+    public function changeName(Name $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function requestEmailChanging(Email $email, string $token): void
+    {
+        if (!$this->isActive()) {
+            throw new \DomainException('User is not active.');
+        }
+        if ($this->email && $this->email->isEqual($email)) {
+            throw new \DomainException('Email is already same.');
+        }
+        $this->newEmail = $email;
+        $this->newEmailToken = $token;
+    }
+
+    public function confirmEmailChanging(string $token): void
+    {
+        if (!$this->newEmailToken) {
+            throw new \DomainException('Changing is not requested.');
+        }
+        if ($this->newEmailToken !== $token) {
+            throw new \DomainException('Incorrect changing token.');
+        }
+        $this->email = $this->newEmail;
+        $this->newEmail = null;
+        $this->newEmailToken = null;
+    }
+
     /**
      * @return null|string
      */
@@ -217,7 +270,12 @@ class User
 		return $this->date;
 	}
 
-	public function getEmail(): Email
+    public function getName(): Name
+    {
+        return $this->name;
+    }
+
+	public function getEmail(): ?Email
 	{
 		return $this->email;
 	}
@@ -258,5 +316,37 @@ class User
         if($this->resetToken->isEmpty()){
             $this->resetToken = null;
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus(string $status): void
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return Email|null
+     */
+    public function getNewEmail(): ?Email
+    {
+        return $this->newEmail;
+    }
+
+    /**
+     * @return Email|null
+     */
+    public function getNewEmailToken(): ?Email
+    {
+        return $this->newEmailToken;
     }
 }
