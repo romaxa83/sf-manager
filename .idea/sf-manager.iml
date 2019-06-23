@@ -34,8 +34,10 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-components" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />
@@ -161,8 +163,10 @@
           <root url="file://$MODULE_DIR$/app/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-components" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />
@@ -284,8 +288,10 @@
           <root url="file://$MODULE_DIR$/app/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-components" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />

@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block breadcrumbs %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ path('users') }}">Users</a></li>
+        <li class="breadcrumb-item active">{{ user.name.full }}</li>
+    </ol>
+{% endblock %}
+
+{% block body %}
+
+    <div class="controls">
+        {% if user.id.value != app.user.id %}
+            <a href="{{ path('users.edit', {'id': user.id}) }}" class="btn btn-primary">Edit</a>
+            <a href="{{ path('users.role', {'id': user.id}) }}" class="btn btn-primary">Change Role</a>
+        {% endif %}
+        {% if user.wait %}
+            <form action="{{ path('users.confirm', {'id': user.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                <input type="hidden" name="token" value="{{ csrf_token('confirm') }}" />
+                <button type="submit" class="btn btn-success">Confirm</button>
+            </form>
+        {% endif %}
+        {% if user.active and user.id.value != app.user.id %}
+            <form action="{{ path('users.block', {'id': user.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                <input type="hidden" name="token" value="{{ csrf_token('block') }}" />
+                <button type="submit" class="btn btn-danger">Block</button>
+            </form>
+        {% endif %}
+        {% if user.blocked %}
+            <form action="{{ path('users.activate', {'id': user.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                <input type="hidden" name="token" value="{{ csrf_token('activate') }}" />
+                <button type="submit" class="btn btn-success">Activate</button>
+            </form>
+        {% endif %}
+    </div>
+
+    <div class="box">
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ user.name.full }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email ? user.email.value : '' }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{{ user.date|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ user_role(user.role.name) }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ user_status(user.status) }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {% if user.networks %}
+        <div class="box">
+            <table class="table table-bordered mb-0">
+                <tbody>
+                {% for network in user.networks %}
+                    <tr>
+                        <th>{{ network.network }}</th>
+                        <td>{{ network.networkId }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+{% endblock %}

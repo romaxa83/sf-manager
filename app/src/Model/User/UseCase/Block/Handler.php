@@ -1,12 +1,10 @@
 <?php
-
 declare(strict_types=1);
 
-namespace App\Model\User\UseCase\Role;
+namespace App\Model\User\UseCase\Block;
 
 use App\Model\Flusher;
 use App\Model\User\Entity\User\Id;
-use App\Model\User\Entity\User\Role;
 use App\Model\User\Entity\User\UserRepository;
 
 class Handler
@@ -23,9 +21,7 @@ class Handler
     public function handle(Command $command): void
     {
         $user = $this->users->get(new Id($command->id));
-
-        $user->changeRole(new Role($command->role));
-
+        $user->block();
         $this->flusher->flush();
     }
 }

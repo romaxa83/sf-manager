@@ -123,6 +123,8 @@
       <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/app/vendor/league/oauth2-client" />
       <path value="$PROJECT_DIR$/app/vendor/league/oauth2-facebook" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
