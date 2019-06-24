@@ -1,7 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roomaxa
- * Date: 24.06.19
- * Time: 20:58
- */
+declare(strict_types=1);
+
+namespace App\Model\Work\UseCase\Members\Member\Archive;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
+class Command
+{
+    /**
+     * @Assert\NotBlank()
+     */
+    public $id;
+
+    public function __construct(string $id)
+    {
+        $this->id = $id;
+    }
+}
