@@ -221,15 +221,15 @@ class MembersController extends AbstractController
         return $this->redirectToRoute('work.members.show', ['id' => $member->getId()]);
     }
 
-//    /**
-//     * @Route("/{id}", name=".show", requirements={"id"=Guid::PATTERN})
-//     * @param Member $member
+    /**
+     * @Route("/{id}", name=".show", requirements={"id"=Guid::PATTERN})
+     * @param Member $member
 //     * @param DepartmentFetcher $fetcher
-//     * @return Response
-//     */
-//    public function show(Member $member, DepartmentFetcher $fetcher): Response
-//    {
+     * @return Response
+     */
+    public function show(Member $member): Response
+    {
 //        $departments = $fetcher->allOfMember($member->getId()->getValue());
-//        return $this->render('app/work/members/show.html.twig', compact('member', 'departments'));
-//    }
+        return $this->render('app/work/members/show.html.twig', compact('member'));
+    }
 }

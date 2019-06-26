@@ -1,6 +1,9 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up app-init
+init: docker-down docker-pull docker-build docker-up app-init permission
 test: app-test	
+
+permission:
+    sudo chmod 777 -R app/var
 
 docker-up:
 	docker-compose up -d

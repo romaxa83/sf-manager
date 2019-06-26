@@ -14,6 +14,7 @@ use App\Model\User\UseCase\Block;
 use App\Model\User\UseCase\SignUp\ConfirmConsole;
 use App\ReadModel\User\UserFetcher;
 use App\ReadModel\User\Filter;
+use App\ReadModel\Work\Members\Member\MemberFetcher;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -246,9 +247,11 @@ class UsersController extends AbstractController
      * @param User $user
      * @return Response
      */
-    public function show(User $user): Response
+    public function show(User $user, MemberFetcher $members): Response
     {
-        return $this->render('app/users/show.html.twig', compact('user'));
+        $member = $members->find($user->getId()->getValue());
+
+        return $this->render('app/users/show.html.twig', compact('user','member'));
     }
 
 }

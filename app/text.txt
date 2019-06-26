@@ -1,0 +1,13 @@
+Work
+    Members
+        Group
+        Member
+
+    Project
+        Role
+            Role
+            Id
+            Permission[]
+        Project
+        Department
+        Membership -> Member, Department[], Role[]
