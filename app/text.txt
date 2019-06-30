@@ -9,5 +9,5 @@ Work
             Id
             Permission[]
         Project
-        Department
-        Membership -> Member, Department[], Role[]
+        Department[]
+        Membership[] -> Member, Department[], Role[]

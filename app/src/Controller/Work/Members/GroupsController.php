@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Work\Members;
 
+use App\Controller\ErrorHandler;
 use App\Model\Work\Entity\Members\Group\Group;
 use App\Model\Work\UseCase\Members\Group\Create;
 use App\Model\Work\UseCase\Members\Group\Edit;
@@ -21,14 +22,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class GroupsController extends AbstractController
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private $errors;
 
-    public function __construct(LoggerInterface $logger)
+    public function __construct(ErrorHandler $errors)
     {
-        $this->logger = $logger;
+        $this->errors = $errors;
     }
 
     /**
@@ -62,7 +60,7 @@ class GroupsController extends AbstractController
 
                 return $this->redirectToRoute('work.members.groups');
             } catch (\DomainException $e) {
-                $this->logger->error($e->getMessage(),['exception' => $e]);
+                $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
             }
         }
@@ -92,7 +90,7 @@ class GroupsController extends AbstractController
 
                 return $this->redirectToRoute('work.members.groups.show', ['id' => $group->getId()]);
             } catch (\DomainException $e) {
-                $this->logger->error($e->getMessage(),['exception' => $e]);
+                $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
             }
         }
@@ -123,7 +121,7 @@ class GroupsController extends AbstractController
 
             return $this->redirectToRoute('work.members.groups');
         } catch (\DomainException $e) {
-            $this->logger->error($e->getMessage(),['exception' => $e]);
+            $this->errors->handle($e);
             $this->addFlash('error', $e->getMessage());
         }
 

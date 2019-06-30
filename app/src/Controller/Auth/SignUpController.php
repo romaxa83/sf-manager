@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Auth;
 
+use App\Controller\ErrorHandler;
 use App\Model\User\UseCase\SignUp;
 use App\ReadModel\User\UserFetcher;
 use App\Security\LoginFormAuthenticator;
@@ -16,18 +17,15 @@ use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
 class SignUpController extends AbstractController
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private $errors;
     /**
      * @var UserFetcher
      */
     private $userFetcher;
 
-    public function __construct(UserFetcher $userFetcher, LoggerInterface $logger)
+    public function __construct(UserFetcher $userFetcher, ErrorHandler $errors)
     {
-        $this->logger = $logger;
+        $this->errors = $errors;
         $this->userFetcher = $userFetcher;
     }
 
@@ -52,7 +50,7 @@ class SignUpController extends AbstractController
 
                 return $this->redirectToRoute('home');
             } catch (\DomainException $e){
-                $this->logger->error($e->getMessage(), ['exception' => $e]);
+                $this->errors->handle($e);
                 $this->addFlash('error',$e->getMessage());
             }
         }
@@ -100,7 +98,7 @@ class SignUpController extends AbstractController
                 'main'//указываем firewall из security.yml
             );
         } catch (\DomainException $e){
-            $this->logger->error($e->getMessage(), ['exception' => $e]);
+            $this->errors->handle($e);
             $this->addFlash('error',$e->getMessage());
 
             return $this->redirectToRoute('home');

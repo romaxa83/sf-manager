@@ -2,42 +2,98 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ff18bb1-91bc-4455-878b-a2d1a4e71642" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Annotation/Guid.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/HomeController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Id.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/IdType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/ProjectRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Status.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/StatusType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Form.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Form.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Widget/Work/Members/Member/StatusWidget.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/members/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/widget/work/members/member/status.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/text.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/ErrorHandler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/ProjectController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/Settings/DepartmentController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/Settings/MembersController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/Settings/SettingsController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/ProjectsController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/RolesController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Menu/Work/Projects/ProjectMenu.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Menu/Work/Projects/SettingsMenu.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Department.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Id.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/IdType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Membership.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Id.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/IdType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Permission.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/PermissionsType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/RoleRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Create/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Create/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Create/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Edit/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Edit/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Edit/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Remove/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Remove/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Command.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Handler.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/DepartmentFetcher.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Filter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/ProjectFetcher.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/RoleFetcher.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Widget/Work/Projects/Project/StatusWidget.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/create.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/_tabs.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/_tabs.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/departments/create.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/departments/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/departments/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/assign.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/project/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/roles/copy.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/roles/create.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/roles/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/roles/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/roles/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/widget/work/projects/project/status.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/translations/work_permissions.en.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change beforePath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" afterPath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yaml" afterPath="$PROJECT_DIR$/app/config/services.yaml" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Auth/ResetController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Auth/ResetController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Auth/SignUpController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Auth/SignUpController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Profile/EmailController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Profile/EmailController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Profile/NameController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Profile/NameController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Profile/OAuth/DetachController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Profile/OAuth/DetachController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Profile/OAuth/FacebookController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Profile/OAuth/FacebookController.php" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/UsersController.php" afterPath="$PROJECT_DIR$/app/src/Controller/UsersController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/Work/Members/GroupsController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Members/GroupsController.php" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/Work/Members/MembersController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Members/MembersController.php" />
       <change beforePath="$PROJECT_DIR$/app/src/Menu/SidebarMenu.php" afterPath="$PROJECT_DIR$/app/src/Menu/SidebarMenu.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/ProjectRepository.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/ProjectRepository.php" />
       <change beforePath="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/users/show.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/users/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/work/members/groups/edit.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/work/members/groups/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/work/members/index.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/work/members/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/work/members/move.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/work/members/move.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/work/members/show.htm.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/text.txt" afterPath="$PROJECT_DIR$/app/text.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/app/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,116 +108,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#91#131#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Handler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Handler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#91#113#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Command.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#89#140#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#89#129#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Handler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#89#111#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Command.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Handler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#94#116#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Command.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Handler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#91#113#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Makefile">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Handler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="1" column="72" lean-forward="false" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#103#125#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberFetcher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Filter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Filter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-516">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assign.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/assign.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/ProjectsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Filter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Filter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-228">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectFetcher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/ProjectFetcher.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="156" column="75" lean-forward="true" selection-start-line="156" selection-start-column="75" selection-end-line="156" selection-end-column="75" />
+              <folding>
+                <element signature="e#83#139#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,57 +226,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Members/Member/StatusType.php" />
-        <option value="$PROJECT_DIR$/app/config/packages/security.yaml" />
-        <option value="$PROJECT_DIR$/app/src/Controller/Work/Members/GroupsController.php" />
-        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Members/GroupFetcher.php" />
-        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Filter.php" />
-        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Form.php" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/_tabs.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/create.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/_tabs.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/groups/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/groups/create.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/groups/_tabs.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Members/Group/Group.php" />
-        <option value="$PROJECT_DIR$/app/config/services.yaml" />
-        <option value="$PROJECT_DIR$/app/src/Migrations/Version20190624185439.php" />
-        <option value="$PROJECT_DIR$/app/templates/override/menu.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Menu/SidebarMenu.php" />
-        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php" />
-        <option value="$PROJECT_DIR$/app/src/Widget/Work/Members/Member/StatusWidget.php" />
-        <option value="$PROJECT_DIR$/app/templates/widget/work/members/member/status.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Controller/Work/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/groups/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/users/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Controller/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/show.htm.twig" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Controller/Work/Members/MembersController.php" />
-        <option value="$PROJECT_DIR$/app/templates/app/work/members/move.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Annotation/Guid.php" />
-        <option value="$PROJECT_DIR$/app/text.txt" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Id.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/IdType.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Status.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/StatusType.php" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/assign.html.twig" />
         <option value="$PROJECT_DIR$/app/config/packages/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Form.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Copy/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Form.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Id.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/IdType.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Permission.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/PermissionsType.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/RoleRepository.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Form.php" />
+        <option value="$PROJECT_DIR$/app/translations/work_permissions.en.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/RolesController.php" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/roles/copy.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/roles/create.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/roles/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/roles/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/_tabs.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/services.yaml" />
+        <option value="$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php" />
+        <option value="$PROJECT_DIR$/app/text.txt" />
         <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Handler.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Form.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Handler.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Form.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Handler.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Handler.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Handler.php" />
-        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Membership.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/ProjectRepository.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/DepartmentFetcher.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Department.php" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/roles/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/RoleFetcher.php" />
+        <option value="$PROJECT_DIR$/app/src/Menu/Work/Projects/SettingsMenu.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/Settings/MembersController.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Form.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Form.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Command.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Handler.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/ProjectsController.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Filter.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/ProjectFetcher.php" />
       </list>
     </option>
   </component>
@@ -371,10 +417,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="306" />
-    <option name="y" value="84" />
+    <option name="x" value="200" />
+    <option name="y" value="371" />
     <option name="width" value="1361" />
-    <option name="height" value="607" />
+    <option name="height" value="635" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -393,6 +439,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -422,22 +469,7 @@
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="prod" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Annotation" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -445,14 +477,6 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Profile" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -469,6 +493,91 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Settings" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Members" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -476,67 +585,6 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Menu" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
@@ -563,7 +611,7 @@
               <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Archive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Membership" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -575,18 +623,7 @@
               <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Create" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Membership" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Edit" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -599,18 +636,7 @@
               <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reinstate" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UseCase" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Membership" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Remove" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -625,14 +651,7 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -640,9 +659,128 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Members" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Filter" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Twig" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="settings" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="settings" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="departments" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="settings" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="members" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="roles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -654,7 +792,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,15 +802,15 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/departments" />
+      <recent name="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project" />
+      <recent name="$PROJECT_DIR$/app/src/Menu/Work/Projects" />
+      <recent name="$PROJECT_DIR$/app/src/Menu/Work/Project" />
+      <recent name="$PROJECT_DIR$/app/templates/app/work/projects" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/public" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/templates/app/users" />
-      <recent name="$PROJECT_DIR$/app/templates/app" />
-      <recent name="$PROJECT_DIR$/app/src/Model/Blog/UseCase/Category/Create" />
-      <recent name="$PROJECT_DIR$/app/templates" />
-      <recent name="$PROJECT_DIR$/app/src/Model/User/UseCase/Reset/Request" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -751,23 +888,25 @@
       <workItem from="1561287255519" duration="24233000" />
       <workItem from="1561319587233" duration="1034000" />
       <workItem from="1561396966838" duration="6564000" />
-      <workItem from="1561563980475" duration="6636000" />
+      <workItem from="1561563980475" duration="6706000" />
+      <workItem from="1561578593029" duration="76000" />
+      <workItem from="1561874236378" duration="23071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187335000" />
+    <option name="totallyTimeSpent" value="210552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="306" y="84" width="1361" height="607" extended-state="0" />
+    <frame x="200" y="371" width="1361" height="635" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22661597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25475284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57847536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.576324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -817,254 +956,401 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Form.php">
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#86#137#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#87#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Edit/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#86#108#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Command.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#80#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/IdType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#81#126#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Permission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/PermissionsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#80#128#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#81#129#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/RoleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#81#119#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Create/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="73" lean-forward="false" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+          <folding>
+            <element signature="e#88#139#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/translations/work_permissions.en.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/RolesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1674">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#74#125#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/roles/copy.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/roles/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/roles/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/roles/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/work/_tabs.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/create.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/_tabs.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/groups/index.html.twig.php" />
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/groups/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/groups/create.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/groups/_tabs.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Members/Group/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="330">
+          <caret line="69" column="18" lean-forward="false" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20190624185439.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1561402503778" expanded="true" signature="658:876" ph="CREATE TABLE... work_members_members" />
-            <marker date="1561402503778" expanded="true" signature="1449:1545" ph="CREATE TABLE... work_members_groups" />
-            <marker date="1561402503778" expanded="true" signature="1678:1839" ph="ALTER TABLE work_members_members... " />
-            <marker date="1561402503778" expanded="true" signature="2165:2233" ph="ALTER TABLE work_members_members... " />
-            <marker date="1561402503778" expanded="true" signature="2260:2291" ph="DROP TABLE w... " />
-            <marker date="1561402503778" expanded="true" signature="2318:2348" ph="DROP TABLE w... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/override/menu.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Members/Member/Email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Menu/SidebarMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#78#126#0#PHP" expanded="false" />
+            <element signature="e#59#89#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Members/Member/StatusWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#75#96#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/widget/work/members/member/status.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#64#129#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/groups/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/users/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/users/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Controller/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="253" column="79" lean-forward="false" selection-start-line="253" selection-start-column="79" selection-end-line="253" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/show.htm.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="79" column="14" lean-forward="false" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/work/members/move.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="106" lean-forward="false" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/GroupFetcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Members/MembersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="224" column="37" lean-forward="false" selection-start-line="224" selection-start-column="37" selection-end-line="224" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Annotation/Guid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/text.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Membership.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#84#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/DepartmentFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Role/Remove/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+          <folding>
+            <element signature="e#88#110#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Edit/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#100#165#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Department/Edit/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="e#100#122#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Department.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding>
+            <element signature="e#94#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-588">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/roles/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/RoleFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="e#72#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Menu/Work/Projects/SettingsMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="58" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/Settings/MembersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#114#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#100#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/ProjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#83#121#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Add/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#99#121#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#101#166#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#101#159#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Edit/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#100#122#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Membership/Remove/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#103#125#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/MemberFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Filter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1072,179 +1358,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Id.php">
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Members/Member/Filter/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#83#104#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/IdType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#83#128#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="-516">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/StatusType.php">
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/project/settings/members/assign.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="e#83#128#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/doctrine.yaml">
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="28" column="88" lean-forward="false" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        <state relative-caret-position="180">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Filter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/Filter/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Project/ProjectFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="-408">
+          <caret line="156" column="75" lean-forward="true" selection-start-line="156" selection-start-column="75" selection-end-line="156" selection-end-column="75" />
           <folding>
             <element signature="e#83#139#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Archive/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="e#92#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#91#131#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Create/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#91#113#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#140#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#129#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Edit/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#111#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Reinstate/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#94#116#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Project/Remove/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#91#113#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="72" lean-forward="false" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>

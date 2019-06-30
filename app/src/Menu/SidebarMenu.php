@@ -36,14 +36,14 @@ class SidebarMenu
             ->setExtra('icon', 'nav-icon icon-pencil')
             ->addChild('Category',['route' => 'blog.category.index']);
 
-//        $menu->addChild('Projects', ['route' => 'work.projects'])
-//            ->setExtra('routes', [
-//                ['route' => 'work.projects'],
-//                ['pattern' => '/^work.projects\..+/']
-//            ])
-//            ->setExtra('icon', 'nav-icon icon-briefcase')
-//            ->setAttribute('class', 'nav-item')
-//            ->setLinkAttribute('class', 'nav-link');
+        $menu->addChild('Projects', ['route' => 'work.projects'])
+            ->setExtra('routes', [
+                ['route' => 'work.projects'],
+                ['pattern' => '/^work.projects\..+/']
+            ])
+            ->setExtra('icon', 'nav-icon icon-briefcase')
+            ->setAttribute('class', 'nav-item')
+            ->setLinkAttribute('class', 'nav-link');
 
         if ($this->auth->isGranted('ROLE_WORK_MANAGE_MEMBERS')) {
             $menu->addChild('Members', ['route' => 'work.members'])

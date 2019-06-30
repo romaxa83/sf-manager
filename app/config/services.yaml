@@ -4,7 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: 'ru'
+    locale: 'en'
 
 services:
     # default configuration for services in *this* file
@@ -21,6 +21,8 @@ services:
     App\Model\User\Entity\User\UserRepository: ~
     App\Model\Work\Entity\Members\Group\GroupRepository: ~
     App\Model\Work\Entity\Members\Member\MemberRepository: ~
+    App\Model\Work\Entity\Projects\Project\ProjectRepository: ~
+    App\Model\Work\Entity\Projects\Role\RoleRepository: ~
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
@@ -59,3 +61,12 @@ services:
     # определяем боковое меню
     App\Menu\SidebarMenu:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: sidebar}]
+    # определяем меню для проекта (табы)
+    App\Menu\Work\Projects\ProjectMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: work_project}]
+    # табы для настроек проект
+    App\Menu\Work\Projects\SettingsMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: work_project_settings }]
+    # табы проекта
+    App\Menu\Work\MainMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: work_main }]
