@@ -134,6 +134,7 @@ class Membership
         return false;
     }
 
+    // проверяет разрешение у роли
     public function isGranted(string $permission): bool
     {
         foreach ($this->roles as $role) {

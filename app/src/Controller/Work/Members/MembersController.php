@@ -225,9 +225,10 @@ class MembersController extends AbstractController
 //     * @param DepartmentFetcher $fetcher
      * @return Response
      */
-    public function show(Member $member): Response
+    public function show(Member $member, DepartmentFetcher $fetcher): Response
     {
-//        $departments = $fetcher->allOfMember($member->getId()->getValue());
-        return $this->render('app/work/members/show.html.twig', compact('member'));
+        $departments = $fetcher->allOfMember($member->getId()->getValue());
+        return $this->render('app/work/members/show.html.twig',
+            compact('member','departments'));
     }
 }

@@ -186,6 +186,7 @@ class Project
         throw new \DomainException('Member is not found.');
     }
 
+    //проверяет если у пользователя данное разрешение
     public function isMemberGranted(MemberId $id, string $permission): bool
     {
         foreach ($this->memberships as $membership) {

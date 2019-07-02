@@ -66,7 +66,7 @@ class ProjectsController extends AbstractController
      */
     public function create(Request $request, ProjectFetcher $projects, Create\Handler $handler): Response
     {
-//        $this->denyAccessUnlessGranted('ROLE_WORK_MANAGE_PROJECTS');
+        $this->denyAccessUnlessGranted('ROLE_WORK_MANAGE_PROJECTS');
         $command = new Create\Command();
         $command->sort = $projects->getMaxSort() + 1;
 
