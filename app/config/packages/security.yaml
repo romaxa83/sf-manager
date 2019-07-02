@@ -3,6 +3,9 @@ security:
     providers:
         fetcher:
             id: App\Security\UserProvider
+    # шифрование пароля
+    encoders:
+        App\Security\UserIdentity: native
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/

@@ -31,10 +31,18 @@ class SidebarMenu
             ->setAttribute('class', 'nav-item')
             ->setLinkAttribute('class', 'nav-link');
 
-        $menu->addChild('Blog')
-            ->setAttribute('class', 'nav-title')
+        $menu->addChild('Blog')->setAttribute('class', 'nav-title');
+
+        $menu->addChild('Post', ['route' => 'blog.category.index'])
+            ->setExtra('routes', [
+                ['route' => 'blog.category.index'],
+                ['pattern' => '/^blog.category\..+/']
+            ])
             ->setExtra('icon', 'nav-icon icon-pencil')
-            ->addChild('Category',['route' => 'blog.category.index']);
+            ->setAttribute('class', 'nav-item')
+            ->setLinkAttribute('class', 'nav-link');
+
+        $menu->addChild('Work')->setAttribute('class', 'nav-title');
 
         $menu->addChild('Projects', ['route' => 'work.projects'])
             ->setExtra('routes', [

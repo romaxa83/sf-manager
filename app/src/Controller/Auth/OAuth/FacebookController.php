@@ -3,7 +3,7 @@ namespace App\Controller\Auth\OAuth;
 
 use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Контролер для авторизация через facebook
  */
-class FacebookController extends Controller
+class FacebookController extends AbstractController
 {
     /**
      * @Route("/oauth/facebook", name="oauth.facebook")
