@@ -1,6 +1,9 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up app-init permission
+init: docker-down docker-pull docker-build docker-up app-init cp-env doctrine-migrate permission
 test: app-test
+
+cp-env:
+	cp app/.env.example app/.env
 
 permission:
 	sudo chmod 777 -R app/var
