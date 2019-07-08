@@ -59,7 +59,7 @@ class Handler
             $this->tasks->add($task);
 //            $tasks[] = $task;
 //        }
-//        $this->flusher->flush(...$tasks);
-        $this->flusher->flush();
+
+        $this->flusher->flush(...$tasks);
     }
 }

@@ -1,5 +1,5 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up app-init cp-env doctrine-migrate permission
+init: docker-down docker-pull docker-build docker-up app-init cp-env permission doctrine-migrate
 test: app-test
 
 cp-env:

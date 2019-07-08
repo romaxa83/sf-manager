@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Work\UseCase\Projects\Task\Create;
+namespace App\Model\Work\UseCase\Projects\Task\Type;
 
 use App\Model\Work\Entity\Projects\Task\Type as TaskType;
 use Symfony\Component\Form\AbstractType;
@@ -15,22 +15,11 @@ class Form extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-//            ->add('names', NamesType::class, ['attr' => ['rows' => 3]])
-            ->add('names', Type\TextType::class)
-            ->add('content', Type\TextareaType::class, ['required' => false, 'attr' => ['rows' => 10]])
-            ->add('parent', Type\IntegerType::class, ['required' => false])
-            ->add('plan', Type\DateType::class, ['required' => false, 'widget' => 'single_text', 'input' => 'datetime_immutable'])
             ->add('type', Type\ChoiceType::class, ['choices' => [
                 'None' => TaskType::NONE,
                 'Error' => TaskType::ERROR,
                 'Feature' => TaskType::FEATURE,
-            ]])
-            ->add('priority', Type\ChoiceType::class, ['choices' => [
-                'Low' => 1,
-                'Normal' => 2,
-                'High' => 3,
-                'Extra' => 4
-            ]]);
+            ], 'attr' => ['onchange' => 'this.form.submit()']]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
@@ -38,5 +27,10 @@ class Form extends AbstractType
         $resolver->setDefaults(array(
             'data_class' => Command::class,
         ));
+    }
+
+    public function getBlockPrefix(): string
+    {
+        return 'type';
     }
 }
