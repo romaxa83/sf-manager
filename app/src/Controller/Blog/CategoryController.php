@@ -3,39 +3,58 @@ declare(strict_types=1);
 
 namespace App\Controller\Blog;
 
-use Psr\Log\LoggerInterface;
+use App\Controller\ErrorHandler;
+
+use App\Model\Blog\Entity\Category\Category as BlogCategory;
 use App\Model\Blog\UseCase\Category;
+use App\ReadModel\Blog\Category\CategoryFetcher;
+use App\ReadModel\Blog\Category\Filter;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Model\Blog\Entity\Category\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+/**
+ * @Route("/blog/category", name="blog.category")
+ */
 class CategoryController extends AbstractController
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private const PER_PAGE = 20;
 
-    public function __construct(LoggerInterface $logger)
+    private $errors;
+
+    public function __construct(ErrorHandler $errors)
     {
-        $this->logger = $logger;
+        $this->errors = $errors;
     }
 
     /**
-     * @Route("/blog/category", name="blog.category.index")
+     * @Route("", name="")
      * @return Response
      */
-    public function index(CategoryRepository $categoryRepository): Response
+    public function index(Request $request, CategoryFetcher $categoryFetcher): Response
     {
+        $filter = new Filter\Filter();
+
+        $form = $this->createForm(Filter\Form::class, $filter);
+        $form->handleRequest($request);
+
+        $pagination = $categoryFetcher->all(
+            $filter,
+            $request->query->getInt('page', 1),
+            self::PER_PAGE,
+            $request->query->get('sort', 'title'),
+            $request->query->get('direction', 'asc')
+        );
+
         return $this->render('app/blog/category/index.html.twig',[
-            'categories' => $categoryRepository->getAllCategory()
+            'pagination' => $pagination,
+            'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/blog/category/create", name="blog.category.create")
+     * @Route("/create", name=".create")
      * @param Request $request
      * @param Category\Create\Handler $handler
      * @return Response
@@ -53,9 +72,9 @@ class CategoryController extends AbstractController
                 $handler->handle($command);
                 $this->addFlash('success','Category created successfully.');
 
-                return $this->redirectToRoute('blog.category.index');
+                return $this->redirectToRoute('blog.category');
             } catch (\DomainException $e){
-                $this->logger->error($e->getMessage(), ['exception' => $e]);
+                $this->errors->handle($e);
                 $this->addFlash('error',$e->getMessage());
             }
         }
@@ -65,7 +84,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/blog/category/edit/{slug}", name="blog.category.edit")
+     * @Route("/edit/{slug}", name=".edit")
      * @param Request $request
      * @param Category\Create\Handler $handler
      * @return Response
@@ -81,9 +100,9 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 $handler->handle($command);
-                return $this->redirectToRoute('blog.category.index');
+                return $this->redirectToRoute('blog.category');
             } catch (\DomainException $e) {
-                $this->logger->error($e->getMessage(), ['exception' => $e]);
+                $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
             }
         }
@@ -94,7 +113,7 @@ class CategoryController extends AbstractController
 
 
     /**
-     * @Route("/blog/category/delete/{id}", name="blog.category.delete")
+     * @Route("/delete/{id}", name=".delete")
      * @param Request $request
      * @param Category\Remove\Handler $handler
      * @return Response
@@ -109,13 +128,20 @@ class CategoryController extends AbstractController
         try {
             $handler->handle($command);
             $this->addFlash('success','Category is remove.');
-
-            return $this->redirectToRoute('blog.category.index');
         } catch (\DomainException $e) {
-            $this->logger->error($e->getMessage(), ['exception' => $e]);
+            $this->errors->handle($e);
             $this->addFlash('error', $e->getMessage());
         }
-        return $this->redirectToRoute('blog.category.index');
+        return $this->redirectToRoute('blog.category');
     }
 
+    /**
+     * @Route("/{slug}", name=".show")
+     * @param BlogCategory $category
+     * @return Response
+     */
+    public function show(BlogCategory $category): Response
+    {
+        return $this->render('app/blog/category/show.html.twig', compact('category'));
+    }
 }

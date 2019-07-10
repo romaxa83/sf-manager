@@ -2,24 +2,16 @@
 
 {% block title %}Create Blog's Category{% endblock %}
 
-{% block body %}
-
+{% block breadcrumbs %}
     <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="{{ path('home') }}">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="{{ path('blog.category.index') }}">Category</a>
-        </li>
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ path('work') }}">Post</a></li>
+        <li class="breadcrumb-item"><a href="{{ path('blog.category') }}">Categories</a></li>
         <li class="breadcrumb-item active">Create</li>
-
-        <li class="breadcrumb-menu d-md-down-none">
-            <div class="btn-group" role="group" aria-label="Button group">
-                <a class="btn" href="#">
-                    <i class="icon-settings"></i> &nbsp;Settings</a>
-            </div>
-        </li>
     </ol>
+{% endblock %}
+
+{% block body %}
 
     <div class="card">
         <div class="card-header">

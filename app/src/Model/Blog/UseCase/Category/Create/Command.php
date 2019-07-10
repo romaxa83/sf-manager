@@ -11,7 +11,7 @@ class Command
     /**
      * @var string
      * @Assert\NotBlank()
-     * @Assert\Length(min="6")
+     * @Assert\Length(min="4")
      */
     public $title;
 }

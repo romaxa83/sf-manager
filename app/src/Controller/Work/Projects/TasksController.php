@@ -61,6 +61,7 @@ class TasksController extends AbstractController
      */
     public function index(Request $request, TaskFetcher $tasks): Response
     {
+        //для админа выводим все задачи,для остальных только их задачи
         if ($this->isGranted('ROLE_WORK_MANAGE_PROJECTS')) {
             $filter = Filter\Filter::all();
         } else {

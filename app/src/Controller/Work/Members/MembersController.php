@@ -16,8 +16,6 @@ use App\Model\Work\UseCase\Members\Member\Move;
 use App\ReadModel\Work\Members\Member\Filter;
 use App\ReadModel\Work\Members\Member\MemberFetcher;
 use App\ReadModel\Work\Projects\Project\DepartmentFetcher;
-
-use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -48,8 +46,10 @@ class MembersController extends AbstractController
     public function index(Request $request, MemberFetcher $fetcher): Response
     {
         $filter = new Filter\Filter();
+
         $form = $this->createForm(Filter\Form::class, $filter);
         $form->handleRequest($request);
+
         $pagination = $fetcher->all(
             $filter,
             $request->query->getInt('page', 1),

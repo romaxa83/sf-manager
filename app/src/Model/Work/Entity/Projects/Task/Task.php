@@ -218,65 +218,65 @@ class Task
         $this->changeStatus($date, Status::working());
     }
 
-//    public function setChildOf(Member $actor, \DateTimeImmutable $date, Task $parent): void
-//    {
-//        if ($parent === $this->parent) {
-//            return;
-//        }
-//        $current = $parent;
-//        do {
-//            if ($current === $this) {
-//                throw new \DomainException('Cyclomatic children.');
-//            }
-//        }
-//        while ($current && $current = $current->getParent());
-//        $this->parent = $parent;
-//        $this->addChange($actor, $date, Set::fromParent($parent->getId()));
-//    }
+    public function setChildOf(Member $actor, \DateTimeImmutable $date, Task $parent): void
+    {
+        if ($parent === $this->parent) {
+            return;
+        }
+        $current = $parent;
+        do {
+            if ($current === $this) {
+                throw new \DomainException('Cyclomatic children.');
+            }
+        }
+        while ($current && $current = $current->getParent());
+        $this->parent = $parent;
+        $this->addChange($actor, $date, Set::fromParent($parent->getId()));
+    }
 
-//    public function removeChildOf(Member $actor, \DateTimeImmutable $date): void
-//    {
-//        $this->parent = null;
-//        $this->addChange($actor, $date, Set::forRemovedParent());
-//    }
+    public function removeChildOf(Member $actor, \DateTimeImmutable $date): void
+    {
+        $this->parent = null;
+        $this->addChange($actor, $date, Set::forRemovedParent());
+    }
 //
 //    public function setRoot(): void
 //    {
 //        $this->parent = null;
 //    }
 //
-//    public function plan(Member $actor, \DateTimeImmutable $date, \DateTimeImmutable $plan): void
-//    {
-//        $this->planDate = $plan;
-//        $this->addChange($actor, $date, Set::fromPlan($plan));
+    public function plan(Member $actor, \DateTimeImmutable $date, \DateTimeImmutable $plan): void
+    {
+        $this->planDate = $plan;
+        $this->addChange($actor, $date, Set::fromPlan($plan));
 //        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, $date));
-//    }
-//
-//    public function removePlan(Member $actor, \DateTimeImmutable $date): void
-//    {
-//        $this->planDate = null;
-//        $this->addChange($actor, $date, Set::forRemovedPlan());
-//        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, null));
-//    }
-//
-//    public function move(Member $actor, \DateTimeImmutable $date, Project $project): void
-//    {
-//        if ($project === $this->project) {
-//            throw new \DomainException('Project is already same.');
-//        }
-//        $this->project = $project;
-//        $this->addChange($actor, $date, Set::fromProject($project->getId()));
-//    }
+    }
 
-//    public function changeType(Member $actor, \DateTimeImmutable $date, Type $type): void
-//    {
-//        if ($this->type->isEqual($type)) {
-//            throw new \DomainException('Type is already same.');
-//        }
-//        $this->type = $type;
-//        $this->addChange($actor, $date, Set::fromType($type));
+    public function removePlan(Member $actor, \DateTimeImmutable $date): void
+    {
+        $this->planDate = null;
+        $this->addChange($actor, $date, Set::forRemovedPlan());
+//        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, null));
+    }
+
+    public function move(Member $actor, \DateTimeImmutable $date, Project $project): void
+    {
+        if ($project === $this->project) {
+            throw new \DomainException('Project is already same.');
+        }
+        $this->project = $project;
+        $this->addChange($actor, $date, Set::fromProject($project->getId()));
+    }
+
+    public function changeType(Member $actor, \DateTimeImmutable $date, Type $type): void
+    {
+        if ($this->type->isEqual($type)) {
+            throw new \DomainException('Type is already same.');
+        }
+        $this->type = $type;
+        $this->addChange($actor, $date, Set::fromType($type));
 //        $this->recordEvent(new Event\TaskTypeChanged($actor->getId(), $this->id, $type));
-//    }
+    }
 
 //    public function changeStatus(Member $actor, \DateTimeImmutable $date, Status $status): void
     public function changeStatus(\DateTimeImmutable $date, Status $status): void
@@ -300,27 +300,27 @@ class Task
 //        }
     }
 
-//    public function changeProgress(Member $actor, \DateTimeImmutable $date, int $progress): void
-//    {
-//        Assert::range($progress, 0, 100);
-//        if ($progress === $this->progress) {
-//            throw new \DomainException('Progress is already same.');
-//        }
-//        $this->progress = $progress;
-//        $this->addChange($actor, $date, Set::fromProgress($progress));
+    public function changeProgress(Member $actor, \DateTimeImmutable $date, int $progress): void
+    {
+        Assert::range($progress, 0, 100);
+        if ($progress === $this->progress) {
+            throw new \DomainException('Progress is already same.');
+        }
+        $this->progress = $progress;
+        $this->addChange($actor, $date, Set::fromProgress($progress));
 //        $this->recordEvent(new Event\TaskProgressChanged($actor->getId(), $this->id, $progress));
-//    }
+    }
 
-//    public function changePriority(Member $actor, \DateTimeImmutable $date, int $priority): void
-//    {
-//        Assert::range($priority, 1, 4);
-//        if ($priority === $this->priority) {
-//            throw new \DomainException('Priority is already same.');
-//        }
-//        $this->priority = $priority;
-//        $this->addChange($actor, $date, Set::fromPriority($priority));
+    public function changePriority(Member $actor, \DateTimeImmutable $date, int $priority): void
+    {
+        Assert::range($priority, 1, 4);
+        if ($priority === $this->priority) {
+            throw new \DomainException('Priority is already same.');
+        }
+        $this->priority = $priority;
+        $this->addChange($actor, $date, Set::fromPriority($priority));
 //        $this->recordEvent(new Event\TaskPriorityChanged($actor->getId(), $this->id, $priority));
-//    }
+    }
 
     public function hasExecutor(MemberId $id): bool
     {
@@ -332,28 +332,28 @@ class Task
         return false;
     }
 
-//    public function assignExecutor(Member $actor, \DateTimeImmutable $date, Member $executor): void
-//    {
-//        if ($this->executors->contains($executor)) {
-//            throw new \DomainException('Executor is already assigned.');
-//        }
-//        $this->executors->add($executor);
-//        $this->addChange($actor, $date, Set::fromExecutor($executor->getId()));
+    public function assignExecutor(Member $actor, \DateTimeImmutable $date, Member $executor): void
+    {
+        if ($this->executors->contains($executor)) {
+            throw new \DomainException('Executor is already assigned.');
+        }
+        $this->executors->add($executor);
+        $this->addChange($actor, $date, Set::fromExecutor($executor->getId()));
 //        $this->recordEvent(new Event\TaskExecutorAssigned($actor->getId(), $this->id, $executor->getId()));
-//    }
+    }
 
-//    public function revokeExecutor(Member $actor, \DateTimeImmutable $date, MemberId $id): void
-//    {
-//        foreach ($this->executors as $current) {
-//            if ($current->getId()->isEqual($id)) {
-//                $this->executors->removeElement($current);
-//                $this->addChange($actor, $date, Set::fromRevokedExecutor($current->getId()));
+    public function revokeExecutor(Member $actor, \DateTimeImmutable $date, MemberId $id): void
+    {
+        foreach ($this->executors as $current) {
+            if ($current->getId()->isEqual($id)) {
+                $this->executors->removeElement($current);
+                $this->addChange($actor, $date, Set::fromRevokedExecutor($current->getId()));
 //                $this->recordEvent(new Event\TaskExecutorRevoked($actor->getId(), $this->id, $current->getId()));
-//                return;
-//            }
-//        }
-//        throw new \DomainException('Executor is not assigned.');
-//    }
+                return;
+            }
+        }
+        throw new \DomainException('Executor is not assigned.');
+    }
 
     public function isNew(): bool
     {
@@ -459,14 +459,14 @@ class Task
 //        return $this->changes->toArray();
 //    }
 
-//    private function addChange(Member $actor, \DateTimeImmutable $date, Set $set): void
-//    {
-//        if ($last = $this->changes->last()) {
-//            /** @var Change $last */
-//            $next = $last->getId()->next();
-//        } else {
-//            $next = ChangeId::first();
-//        }
-//        $this->changes->add(new Change($this, $next, $actor, $date, $set));
-//    }
+    private function addChange(Member $actor, \DateTimeImmutable $date, Set $set): void
+    {
+        if ($last = $this->changes->last()) {
+            /** @var Change $last */
+            $next = $last->getId()->next();
+        } else {
+            $next = ChangeId::first();
+        }
+        $this->changes->add(new Change($this, $next, $actor, $date, $set));
+    }
 }

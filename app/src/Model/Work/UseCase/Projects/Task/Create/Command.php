@@ -22,7 +22,7 @@ class Command
     public $member;
 
     /**
-//     * @var NameRow[]
+     * @var NameRow[]
      * @Assert\NotBlank()
      * @Assert\Valid()
      */

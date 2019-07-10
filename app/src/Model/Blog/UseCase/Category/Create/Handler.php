@@ -13,7 +13,6 @@ use App\Model\User\Service\PasswordHasher;
 
 class Handler
 {
-
     /**
      * @var CategoryRepository
      */
@@ -41,7 +40,7 @@ class Handler
             $command->title,
             new \DateTimeImmutable()
         );
-
+//dd($category);
         $this->categoryRepository->add($category);
 
         $this->flusher->flush();

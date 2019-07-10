@@ -16,7 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 class Category
 {
     public const STATUS_ACTIVE = 1;
-    public const STATUS_INACTIVE = 0;
+    public const STATUS_INACTIVE = 2;
 
     /**
      * @ORM\Id()
@@ -56,7 +56,7 @@ class Category
     public function create(
         string $title,\DateTimeImmutable $date)
     {
-        $this->title = $title;
+        $this->setTitle($title);
         $this->status = self::STATUS_ACTIVE;
         $this->created = $date;
     }
@@ -101,12 +101,12 @@ class Category
         return $this->getTitle();
     }
 
-    public function getStatus(): string
+    public function getStatus()
     {
         return $this->status;
     }
 
-    public function setStatus(string $status): void
+    public function setStatus(integer $status): void
     {
         $this->status = $status;
     }
