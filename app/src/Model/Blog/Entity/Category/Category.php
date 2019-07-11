@@ -115,4 +115,25 @@ class Category
     {
         return $this->created;
     }
+
+    public function activate(): void
+    {
+        if ($this->isActive()) {
+            throw new \DomainException('Category is already active.');
+        }
+        $this->status = self::STATUS_ACTIVE;
+    }
+
+    public function inactivate(): void
+    {
+        if ($this->isInactive()) {
+            throw new \DomainException('Category is already inactive.');
+        }
+        $this->status = self::STATUS_INACTIVE;
+    }
+
+    public function changeStatus($status)
+    {
+        $this->status = $status;
+    }
 }

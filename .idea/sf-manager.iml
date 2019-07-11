@@ -190,6 +190,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/ralouphie/getallheaders" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
@@ -315,6 +316,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/ralouphie/getallheaders" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />

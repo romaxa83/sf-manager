@@ -209,6 +209,7 @@ class UsersController extends AbstractController
 
         return $this->redirectToRoute('users.show', ['id' => $user->getId()]);
     }
+
     /**
      * @Route("/{id}/block", name=".block", methods={"POST"})
      * @param User $user

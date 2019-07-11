@@ -136,6 +136,56 @@ class CategoryController extends AbstractController
     }
 
     /**
+     * @Route("/{id}/activate", name=".activate", methods={"POST"})
+     * @param BlogCategory $category
+     * @param Request $request
+     * @param Category\Status\Handler $handler
+     * @return Response
+     */
+    public function activate(BlogCategory $category, Request $request, Category\Status\Handler $handler): Response
+    {
+        if (!$this->isCsrfTokenValid('active', $request->request->get('token'))) {
+
+            return $this->redirectToRoute('blog.category.show', ['slug' => $category->getSlug()]);
+        }
+
+        $command = new Category\Status\Command($category->getId(),BlogCategory::STATUS_ACTIVE);
+
+        try {
+            $handler->handle($command);
+        } catch (\DomainException $e) {
+            $this->errors->handle($e);
+            $this->addFlash('error', $e->getMessage());
+        }
+        return $this->redirectToRoute('blog.category.show', ['slug' => $category->getSlug()]);
+    }
+
+    /**
+     * @Route("/{id}/inactivate", name=".inactivate", methods={"POST"})
+     * @param BlogCategory $category
+     * @param Request $request
+     * @param Category\Status\Handler $handler
+     * @return Response
+     */
+    public function inactivate(BlogCategory $category, Request $request, Category\Status\Handler $handler): Response
+    {
+        if (!$this->isCsrfTokenValid('block', $request->request->get('token'))) {
+
+            return $this->redirectToRoute('blog.category.show', ['slug' => $category->getSlug()]);
+        }
+
+        $command = new Category\Status\Command($category->getId(),BlogCategory::STATUS_INACTIVE);
+
+        try {
+            $handler->handle($command);
+        } catch (\DomainException $e) {
+            $this->errors->handle($e);
+            $this->addFlash('error', $e->getMessage());
+        }
+        return $this->redirectToRoute('blog.category.show', ['slug' => $category->getSlug()]);
+    }
+
+    /**
      * @Route("/{slug}", name=".show")
      * @param BlogCategory $category
      * @return Response

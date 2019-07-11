@@ -12,10 +12,22 @@
 {% endblock %}
 
 {% block body %}
-
+    {#{{ dump(category.active) }}#}
     <div class="controls">
         <a href="{{ path('blog.category.edit', {'slug': category.slug}) }}" class="btn btn-primary">Edit</a>
         <a href="{{ path('blog.category.delete', {'id': category.id}) }}" class="btn btn-danger">Delete</a>
+        {% if category.active %}
+            <form action="{{ path('blog.category.inactivate', {'id': category.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                <input type="hidden" name="token" value="{{ csrf_token('block') }}" />
+                <button type="submit" class="btn btn-danger">Inactive</button>
+            </form>
+        {% endif %}
+        {% if category.inactive %}
+            <form action="{{ path('blog.category.activate', {'id': category.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                <input type="hidden" name="token" value="{{ csrf_token('active') }}" />
+                <button type="submit" class="btn btn-primary">Active</button>
+            </form>
+        {% endif %}
     </div>
 
     <div class="box">
@@ -35,6 +47,7 @@
             </tr>
             <tr>
                 <th>Status</th>
+                {#<td>{{ category.status }}</td>#}
                 <td>{{ category_status(category.status) }}</td>
             </tr>
             </tbody>
