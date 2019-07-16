@@ -73,3 +73,6 @@ services:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: work_main }]
     App\Menu\Work\Projects\TaskPresetMenu:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: work_projects_task_presets }]
+
+    App\Model\EventDispatcher:
+        class: App\Event\Dispatcher\MessengerEventDispatcher
