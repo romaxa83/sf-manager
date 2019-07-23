@@ -33,10 +33,10 @@ class SidebarMenu
 
         $menu->addChild('Blog')->setAttribute('class', 'nav-title');
 
-        $menu->addChild('Post', ['route' => 'blog.category'])
+        $menu->addChild('Post', ['route' => 'blog.posts'])
             ->setExtra('routes', [
-                ['route' => 'blog.category'],
-                ['pattern' => '/^blog.category\..+/']
+                ['route' => 'blog.posts'],
+                ['pattern' => '/^blog.posts\..+/']
             ])
             ->setExtra('icon', 'nav-icon icon-pencil')
             ->setAttribute('class', 'nav-item')

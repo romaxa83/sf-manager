@@ -71,6 +71,9 @@ services:
     # табы проекта
     App\Menu\Work\MainMenu:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: work_main }]
+    # табы блога
+    App\Menu\Blog\MainMenu:
+        tags: [{ name: knp_menu.menu_builder, method: build, alias: blog_main }]
     App\Menu\Work\Projects\TaskPresetMenu:
         tags: [{ name: knp_menu.menu_builder, method: build, alias: work_projects_task_presets }]
 

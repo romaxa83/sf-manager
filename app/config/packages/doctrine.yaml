@@ -33,6 +33,8 @@ doctrine:
             work_projects_task_id: 'App\Model\Work\Entity\Projects\Task\IdType'
             work_projects_task_type: 'App\Model\Work\Entity\Projects\Task\TypeType'
             work_projects_task_status: 'App\Model\Work\Entity\Projects\Task\StatusType'
+            blog_post_id: 'App\Model\Blog\Entity\Post\IdType'
+            blog_post_status: 'App\Model\Blog\Entity\Post\StatusType'
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -44,12 +46,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Model/User/Entity'
                 prefix: 'App\Model\User\Entity'
                 alias: User
-            BlogCategory:
+            Blog:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/src/Model/Blog/Entity/Category'
-                prefix: 'App\Model\Blog\Entity\Category'
-                alias: BlogCategory
+                dir: '%kernel.project_dir%/src/Model/Blog/Entity'
+                prefix: 'App\Model\Blog\Entity'
+                alias: Blog
             Work:
                 is_bundle: false
                 type: annotation

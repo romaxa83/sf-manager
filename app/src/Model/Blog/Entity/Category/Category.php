@@ -10,7 +10,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity
- * @ORM\HasLifecycleCallbacks
  * @ORM\Table(name="blog_categories")
  */
 class Category
