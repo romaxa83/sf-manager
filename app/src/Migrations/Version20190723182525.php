@@ -22,7 +22,6 @@ final class Version20190723182525 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
 
-        $this->addSql('DROP SEQUENCE work_projects_tasks_seq CASCADE');
         $this->addSql('CREATE TABLE blog_posts (id INT NOT NULL, category_id INT DEFAULT NULL, user_id UUID DEFAULT NULL, title VARCHAR(64) NOT NULL, slug VARCHAR(64) NOT NULL, body TEXT NOT NULL, status VARCHAR(16) NOT NULL, created TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, updated TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, PRIMARY KEY(id))');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_78B2F932989D9B62 ON blog_posts (slug)');
         $this->addSql('CREATE INDEX IDX_78B2F93212469DE2 ON blog_posts (category_id)');
@@ -40,8 +39,7 @@ final class Version20190723182525 extends AbstractMigration
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
-
-        $this->addSql('CREATE SEQUENCE work_projects_tasks_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        
         $this->addSql('DROP TABLE blog_posts');
     }
 }

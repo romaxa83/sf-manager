@@ -13,10 +13,23 @@
 
     {{ include('app/blog/post/_tabs.html.twig') }}
 
+    <div class="controls">
+        <a href="{{ path('blog.post.create') }}" class="btn btn-success">Create Post</a>
+    </div>
+
     <div class="card">
         <div class="card-body">
 
-
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-2">{{ form_widget(form.title) }}</div>
+                <div class="col-md-2">{{ form_widget(form.status) }}</div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <a href="{{ path('blog.posts') }}" class="btn btn-outline-secondary">Reset</a>
+                </div>
+            </div>
+            {{ form_end(form) }}
 
         </div>
     </div>
@@ -25,29 +38,29 @@
         <table class="table table-bordered table-hover">
             <thead>
             <tr>
-                {#<th>{{ knp_pagination_sortable(pagination, 'Name', 'name') }}</th>#}
-                {#<th>{{ knp_pagination_sortable(pagination, 'Email', 'email') }}</th>#}
-                {#<th>{{ knp_pagination_sortable(pagination, 'Group', 'group') }}</th>#}
-                {#<th>Projects</th>#}
-                {#<th>{{ knp_pagination_sortable(pagination, 'Status', 'status') }}</th>#}
+                <th>{{ knp_pagination_sortable(pagination, 'Title', 'title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Body', 'body') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Created', 'created') }}</th>
+                <th>Projects</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Status', 'status') }}</th>
             </tr>
             </thead>
             <tbody>
-            {#{% for member in pagination %}#}
-                {#<tr>#}
+            {% for post in pagination %}
+                <tr>
                     {#<td><a href="{{ path('work.members.show', {'id': member.id}) }}">{{ member.name }}</a></td>#}
-                    {#<td>{{ member.email }}</td>#}
-                    {#<td>{{ member.group }}</td>#}
-                    {#<td>{{ member.memberships_count }}</td>#}
-                    {#<td>{{ member_status(member.status) }}</td>#}
-                {#</tr>#}
-            {#{% endfor %}#}
+                    <td>{{ post.title }}</a></td>
+                    <td>{{ post.body }}</td>
+                    <td>{{ post.created }}</td>
+                    <td>{{ post.status }}</td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
 
     <div class="navigation">
-        {#{{ knp_pagination_render(pagination) }}#}
+        {{ knp_pagination_render(pagination) }}
     </div>
 
 {% endblock %}

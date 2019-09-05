@@ -36,7 +36,7 @@ class SidebarMenu
         $menu->addChild('Post', ['route' => 'blog.posts'])
             ->setExtra('routes', [
                 ['route' => 'blog.posts'],
-                ['pattern' => '/^blog.posts\..+/']
+                ['pattern' => '/^blog\..+/']
             ])
             ->setExtra('icon', 'nav-icon icon-pencil')
             ->setAttribute('class', 'nav-item')

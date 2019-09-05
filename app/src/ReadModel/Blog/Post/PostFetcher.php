@@ -2,17 +2,17 @@
 
 declare(strict_types = 1);
 
-namespace App\ReadModel\Blog\Category;
+namespace App\ReadModel\Blog\Post;
 
-use App\Model\Blog\Entity\Category\Category;
-use App\ReadModel\Blog\Category\Filter\Filter;
+use App\Model\Blog\Entity\Post\Post;
+use App\ReadModel\Blog\Post\Filter\Filter;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\FetchMode;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
 
-class CategoryFetcher
+class PostFetcher
 {
     /**
      * работает напрямую с pdo
@@ -35,22 +35,26 @@ class CategoryFetcher
     )
     {
         $this->connection = $connection;
-        $this->repository = $em->getRepository(Category::class);
+        $this->repository = $em->getRepository(Post::class);
         $this->em = $em;
         $this->paginator = $paginator;
     }
 
-    public function getAllActiveForSelect()
-    {
-        $stmt = $this->connection->createQueryBuilder()
-            ->select('id','title')
-            ->from('blog_categories')
-            ->where('status = :status')
-            ->setParameter(':status', Category::STATUS_ACTIVE)
-            ->execute();
-
-        return $stmt->fetchAll(FetchMode::ASSOCIATIVE);
-    }
+//    public function all()
+//    {
+//        $stmt = $this->connection->createQueryBuilder()
+//            ->select(
+//                'id',
+//                'title',
+//                'status',
+//                'created'
+//            )
+//            ->from('blog_categories')
+//            ->orderBy('name')
+//            ->execute();
+//
+//        return $stmt->fetchAll(FetchMode::ASSOCIATIVE);
+//    }
 
     /**
      * @param Filter $filter
@@ -64,19 +68,20 @@ class CategoryFetcher
     {
         $qb = $this->connection->createQueryBuilder()
             ->select(
-                'c.id',
-                'c.title',
-                'c.slug',
-                'c.created',
-                'c.status'
+                'p.id',
+                'p.title',
+                'p.slug',
+                'p.created',
+                'p.status',
+                'p.body'
             )
-            ->from('blog_categories', 'c');
+            ->from('blog_posts', 'p');
         if ($filter->title) {
-            $qb->andWhere($qb->expr()->like('c.title', ':title'));
+            $qb->andWhere($qb->expr()->like('p.title', ':title'));
             $qb->setParameter(':title', '%' . $filter->title . '%');
         }
         if ($filter->status) {
-            $qb->andWhere('c.status = :status');
+            $qb->andWhere('p.status = :status');
             $qb->setParameter(':status', $filter->status);
         }
         if (!\in_array($sort, ['title', 'created', 'status'], true)) {

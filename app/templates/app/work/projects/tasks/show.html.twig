@@ -240,8 +240,8 @@
             {% if task.content %}
                 <div class="card mb-3">
                     <div class="card-body pb-0">
-                        {#{{ task.content|markdown|purify|work_processor }}#}
-                        {{ task.content|nl2br }}
+                        {{ task.content|markdown }}
+                        {#{{ task.content|nl2br }}#}
                     </div>
                 </div>
             {% endif %}

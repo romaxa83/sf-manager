@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/app/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
@@ -129,6 +130,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/web-profiler-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/webpack-encore-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/tetranz/select2entity-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/zendframework/zend-code" />
@@ -140,6 +142,7 @@
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
+          <root url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
           <root url="file://$MODULE_DIR$/app/vendor/composer" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
@@ -260,6 +263,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/web-profiler-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/webpack-encore-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/app/vendor/tetranz/select2entity-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/twig/twig" />
           <root url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/app/vendor/zendframework/zend-code" />
@@ -267,6 +271,7 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
+          <root url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
           <root url="file://$MODULE_DIR$/app/vendor/composer" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
@@ -387,6 +392,7 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/web-profiler-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/webpack-encore-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/app/vendor/tetranz/select2entity-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/twig/twig" />
           <root url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/app/vendor/zendframework/zend-code" />

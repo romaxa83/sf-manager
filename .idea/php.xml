@@ -131,6 +131,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/messenger" />
+      <path value="$PROJECT_DIR$/app/vendor/tetranz/select2entity-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/cebe/markdown" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

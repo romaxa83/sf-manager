@@ -29,10 +29,10 @@ class MainMenu
             ->setLinkAttribute('class', 'nav-link');
 
         $menu
-            ->addChild('Tasks', ['route' => 'work.projects.tasks'])
+            ->addChild('Category', ['route' => 'work.category'])
             ->setExtra('routes', [
-                ['route' => 'work.projects.tasks'],
-                ['pattern' => '/^work.projects.tasks\..+/']
+                ['route' => 'blog.category'],
+                ['pattern' => '/^blog\..+/']
             ])
             ->setAttribute('class', 'nav-item')
             ->setLinkAttribute('class', 'nav-link');
