@@ -82,3 +82,12 @@ services:
 
     # подключаем пакет markdown
     cebe\markdown\MarkdownExtra:
+
+    # тегируем наши драйвера для twig процессоры
+    App\Service\Work\Processor\Driver\:
+        resource: '../src/Service/Work/Processor/Driver/*Driver.php'
+        tags: ['app.twig.work_processor.driver']
+
+    # подключаем наши драйвера
+    App\Service\Work\Processor\Processor:
+        arguments: [!tagged app.twig.work_processor.driver]
