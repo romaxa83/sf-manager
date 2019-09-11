@@ -80,6 +80,7 @@ class TaskFetcher
             $qb->setParameter(':author', $filter->author);
         }
 
+        // для полнотекстового поиска
         if ($filter->text) {
             $vector = "(setweight(to_tsvector(t.name),'A') || setweight(to_tsvector(coalesce(t.content,'')), 'B'))";
             $query = 'plainto_tsquery(:text)';

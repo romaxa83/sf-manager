@@ -27,6 +27,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/reflection" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/easycorp/easy-log-handler" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/exercise/htmlpurifier-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facebook/webdriver" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
@@ -164,6 +166,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/reflection" />
           <root url="file://$MODULE_DIR$/app/vendor/easycorp/easy-log-handler" />
           <root url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
+          <root url="file://$MODULE_DIR$/app/vendor/exercise/htmlpurifier-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/ezyang/htmlpurifier" />
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
           <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/gedmo/doctrine-extensions" />
@@ -293,6 +297,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/reflection" />
           <root url="file://$MODULE_DIR$/app/vendor/easycorp/easy-log-handler" />
           <root url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
+          <root url="file://$MODULE_DIR$/app/vendor/exercise/htmlpurifier-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/ezyang/htmlpurifier" />
           <root url="file://$MODULE_DIR$/app/vendor/fig/link-util" />
           <root url="file://$MODULE_DIR$/app/vendor/finesse/swiftmailer-defaults-plugin" />
           <root url="file://$MODULE_DIR$/app/vendor/gedmo/doctrine-extensions" />

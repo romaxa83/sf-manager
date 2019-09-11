@@ -59,16 +59,11 @@ services:
         depends_on:
             - app-postgres
         ports:
-            - "8082:80"
+            - "8083:80"
         environment:
             PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
             PGADMIN_DEFAULT_PASSWORD: admin
         restart: unless-stopped
-
-    mailer:
-        image: mailhog/mailhog
-        ports:
-            - "8081:8025"
 
     app-redis:
         image: redis:3.0-alpine
@@ -84,7 +79,30 @@ services:
             - 9000:9000
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - portainer_data:/data    
+            - portainer_data:/data
+
+    #storage для хранения файлов
+    storage:
+        build:
+            context: ./storage/docker/development
+            dockerfile: nginx.docker
+        volumes:
+            - ./storage:/app
+        ports:
+            - "8081:80"
+    storage-ftp:
+        image: stilliard/pure-ftpd
+        environment:
+            FTP_USER_NAME: app
+            FTP_USER_PASS: secret
+            FTP_USER_HOME: /app
+        volumes:
+            - ./storage/public:/app
+
+    mailer:
+        image: mailhog/mailhog
+        ports:
+            - "8082:8025"
 
 volumes:
     composer:  

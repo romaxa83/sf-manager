@@ -8,6 +8,9 @@
   - PgAdmin
   - MailHog
   - Redis
+
+Для хранения файлов используеться эмуляция ftp-сервер,который подымается
+в storage (доступ http://localhost:8081)
 #### Использование
 развертывание приложения.
 
@@ -30,7 +33,7 @@ $ docker-compose run --rm app-php-cli php bin/console <command>
 ##### База данных
 используеться **postgesql**
 
-pgadmin доступна по адресу http://localhost:8082
+pgadmin доступна по адресу http://localhost:8083
 
 - login : ***pgadmin4@pgadmin.org***
 - password : ***admin***
@@ -46,7 +49,7 @@ pgadmin доступна по адресу http://localhost:8082
 ##### Почтовик
 используеться mailhog (для разработки)
 
-доступен по адресу http://localhost:8081
+доступен по адресу http://localhost:8083
 
 ##### Панель для управления контейнерами
 используеться portainer.io

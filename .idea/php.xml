@@ -133,6 +133,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/messenger" />
       <path value="$PROJECT_DIR$/app/vendor/tetranz/select2entity-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/cebe/markdown" />
+      <path value="$PROJECT_DIR$/app/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/app/vendor/exercise/htmlpurifier-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

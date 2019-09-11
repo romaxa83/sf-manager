@@ -89,5 +89,7 @@ services:
         tags: ['app.twig.work_processor.driver']
 
     # подключаем наши драйвера
+    # конструкция [!tagged app.twig.work_processor.driver] говорит о том ,что
+    # в этот класс нужно прокинуть все сервисы которые протегированы как app.twig.work_processor.driver
     App\Service\Work\Processor\Processor:
         arguments: [!tagged app.twig.work_processor.driver]
