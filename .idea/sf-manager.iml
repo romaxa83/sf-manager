@@ -42,6 +42,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
@@ -180,6 +182,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/app/vendor/league/flysystem-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
@@ -198,7 +202,6 @@
           <root url="file://$MODULE_DIR$/app/vendor/ralouphie/getallheaders" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
-          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
@@ -206,7 +209,6 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/cache-contracts" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/console" />
-          <root url="file://$MODULE_DIR$/app/vendor/symfony/contracts" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/css-selector" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/debug" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/debug-bundle" />
@@ -311,6 +313,8 @@
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-menu-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/knpuniversity/oauth2-client-bundle" />
+          <root url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/app/vendor/league/flysystem-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-client" />
           <root url="file://$MODULE_DIR$/app/vendor/league/oauth2-facebook" />
           <root url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
@@ -329,7 +333,6 @@
           <root url="file://$MODULE_DIR$/app/vendor/ralouphie/getallheaders" />
           <root url="file://$MODULE_DIR$/app/vendor/ramsey/uuid" />
           <root url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
-          <root url="file://$MODULE_DIR$/app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/browser-kit" />
@@ -337,7 +340,6 @@
           <root url="file://$MODULE_DIR$/app/vendor/symfony/cache-contracts" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/console" />
-          <root url="file://$MODULE_DIR$/app/vendor/symfony/contracts" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/css-selector" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/debug" />
           <root url="file://$MODULE_DIR$/app/vendor/symfony/debug-bundle" />

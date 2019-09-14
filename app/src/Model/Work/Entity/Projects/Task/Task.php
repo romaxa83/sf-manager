@@ -12,9 +12,9 @@ use App\Model\Work\Entity\Projects\Project\Project;
 //use App\Model\Work\Entity\Projects\Task\Change\Change;
 //use App\Model\Work\Entity\Projects\Task\Change\Id as ChangeId;
 //use App\Model\Work\Entity\Projects\Task\Change\Set;
-//use App\Model\Work\Entity\Projects\Task\File\File;
-//use App\Model\Work\Entity\Projects\Task\File\Id as FileId;
-//use App\Model\Work\Entity\Projects\Task\File\Info;
+use App\Model\Work\Entity\Projects\Task\File\File;
+use App\Model\Work\Entity\Projects\Task\File\Id as FileId;
+use App\Model\Work\Entity\Projects\Task\File\Info;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Webmozart\Assert\Assert;
@@ -88,12 +88,12 @@ class Task implements AggregateRoot
      */
     private $content;
 
-//    /**
-//     * @var ArrayCollection|File[]
-//     * @ORM\OneToMany(targetEntity="App\Model\Work\Entity\Projects\Task\File\File", mappedBy="task", orphanRemoval=true, cascade={"all"})
-//     * @ORM\OrderBy({"date" = "ASC"})
-//     */
-//    private $files;
+    /**
+     * @var ArrayCollection|File[]
+     * @ORM\OneToMany(targetEntity="App\Model\Work\Entity\Projects\Task\File\File", mappedBy="task", orphanRemoval=true, cascade={"all"})
+     * @ORM\OrderBy({"date" = "ASC"})
+     */
+    private $files;
 
     /**
      * @var Type
@@ -160,7 +160,7 @@ class Task implements AggregateRoot
         $this->date = $date;
         $this->name = $name;
         $this->content = $content;
-//        $this->files = new ArrayCollection();
+        $this->files = new ArrayCollection();
         $this->progress = 0;
         $this->type = $type;
         $this->priority = $priority;
@@ -183,25 +183,25 @@ class Task implements AggregateRoot
         $this->recordEvent(new Event\TaskEdited($actor->getId(), $this->id, $name, $content));
     }
 
-//    public function addFile(Member $actor, \DateTimeImmutable $date, FileId $id, Info $info): void
-//    {
-//        $this->files->add(new File($this, $id, $actor, $date, $info));
+    public function addFile(Member $actor, \DateTimeImmutable $date, FileId $id, Info $info): void
+    {
+        $this->files->add(new File($this, $id, $actor, $date, $info));
 //        $this->addChange($actor, $date, Set::fromFile($id));
 //        $this->recordEvent(new Event\TaskFileAdded($actor->getId(), $this->id, $id, $info));
-//    }
+    }
 
-//    public function removeFile(Member $actor, \DateTimeImmutable $date, FileId $id): void
-//    {
-//        foreach ($this->files as $current) {
-//            if ($current->getId()->isEqual($id)) {
-//                $this->files->removeElement($current);
+    public function removeFile(Member $actor, \DateTimeImmutable $date, FileId $id): void
+    {
+        foreach ($this->files as $current) {
+            if ($current->getId()->isEqual($id)) {
+                $this->files->removeElement($current);
 //                $this->addChange($actor, $date, Set::fromRemovedFile($current->getId()));
 //                $this->recordEvent(new Event\TaskFileRemoved($actor->getId(), $this->id, $id, $current->getInfo()));
-//                return;
-//            }
-//        }
-//        throw new \DomainException('File is not found.');
-//    }
+                return;
+            }
+        }
+        throw new \DomainException('File is not found.');
+    }
 
     public function start(Member $actor, \DateTimeImmutable $date): void
     {
@@ -406,13 +406,13 @@ class Task implements AggregateRoot
         return $this->content;
     }
 
-//    /**
-//     * @return File[]
-//     */
-//    public function getFiles(): array
-//    {
-//        return $this->files->toArray();
-//    }
+    /**
+     * @return File[]
+     */
+    public function getFiles(): array
+    {
+        return $this->files->toArray();
+    }
 
     public function getType(): Type
     {

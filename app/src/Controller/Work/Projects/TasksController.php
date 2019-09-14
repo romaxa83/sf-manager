@@ -10,7 +10,7 @@ use App\Model\Work\Entity\Projects\Task\Task;
 use App\Model\Work\UseCase\Projects\Task\ChildOf;
 use App\Model\Work\UseCase\Projects\Task\Edit;
 use App\Model\Work\UseCase\Projects\Task\Executor;
-//use App\Model\Work\UseCase\Projects\Task\Files;
+use App\Model\Work\UseCase\Projects\Task\Files;
 use App\Model\Work\UseCase\Projects\Task\Move;
 use App\Model\Work\UseCase\Projects\Task\Plan;
 use App\Model\Work\UseCase\Projects\Task\Priority;
@@ -29,7 +29,7 @@ use App\ReadModel\Work\Projects\Task\Filter;
 use App\ReadModel\Work\Projects\Task\TaskFetcher;
 use App\Security\Voter\Work\Projects\TaskAccess;
 use App\Controller\ErrorHandler;
-//use App\Service\Uploader\FileUploader;
+use App\Service\Uploader\FileUploader;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -183,51 +183,51 @@ class TasksController extends AbstractController
         ]);
     }
 
-//    /**
-//     * @Route("/{id}/files", name=".files")
-//     * @param Task $task
-//     * @param Request $request
-//     * @param Files\Add\Handler $handler
-//     * @param FileUploader $uploader
-//     * @return Response
-//     */
-//    public function files(Task $task, Request $request, Files\Add\Handler $handler, FileUploader $uploader): Response
-//    {
-//        $this->denyAccessUnlessGranted(TaskAccess::MANAGE, $task);
-//
-//        $command = new Files\Add\Command($this->getUser()->getId(), $task->getId()->getValue());
-//
-//        $form = $this->createForm(Files\Add\Form::class, $command);
-//        $form->handleRequest($request);
-//
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $files = [];
-//            foreach ($form->get('files')->getData() as $file) {
-//                $uploaded = $uploader->upload($file);
-//                $files[] = new Files\Add\File(
-//                    $uploaded->getPath(),
-//                    $uploaded->getName(),
-//                    $uploaded->getSize()
-//                );
-//            }
-//            $command->files = $files;
-//
-//            try {
-//                $handler->handle($command);
-//
-//                return $this->redirectToRoute('work.projects.tasks.show', ['id' => $task->getId()]);
-//            } catch (\DomainException $e) {
-//                $this->errors->handle($e);
-//                $this->addFlash('error', $e->getMessage());
-//            }
-//        }
-//
-//        return $this->render('app/work/projects/tasks/files.html.twig', [
-//            'project' => $task->getProject(),
-//            'task' => $task,
-//            'form' => $form->createView(),
-//        ]);
-//    }
+    /**
+     * @Route("/{id}/files", name=".files")
+     * @param Task $task
+     * @param Request $request
+     * @param Files\Add\Handler $handler
+     * @param FileUploader $uploader
+     * @return Response
+     */
+    public function files(Task $task, Request $request, Files\Add\Handler $handler, FileUploader $uploader): Response
+    {
+        $this->denyAccessUnlessGranted(TaskAccess::MANAGE, $task);
+
+        $command = new Files\Add\Command($this->getUser()->getId(), $task->getId()->getValue());
+
+        $form = $this->createForm(Files\Add\Form::class, $command);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $files = [];
+            foreach ($form->get('files')->getData() as $file) {
+                $uploaded = $uploader->upload($file);
+                $files[] = new Files\Add\File(
+                    $uploaded->getPath(),
+                    $uploaded->getName(),
+                    $uploaded->getSize()
+                );
+            }
+            $command->files = $files;
+
+            try {
+                $handler->handle($command);
+
+                return $this->redirectToRoute('work.projects.tasks.show', ['id' => $task->getId()]);
+            } catch (\DomainException $e) {
+                $this->errors->handle($e);
+                $this->addFlash('error', $e->getMessage());
+            }
+        }
+
+        return $this->render('app/work/projects/tasks/files.html.twig', [
+            'project' => $task->getProject(),
+            'task' => $task,
+            'form' => $form->createView(),
+        ]);
+    }
 
 //    /**
 //     * @Route("/{id}/files/{file_id}/delete", name=".files.delete", methods={"POST"})

@@ -93,3 +93,6 @@ services:
     # в этот класс нужно прокинуть все сервисы которые протегированы как app.twig.work_processor.driver
     App\Service\Work\Processor\Processor:
         arguments: [!tagged app.twig.work_processor.driver]
+    # регистрируем fileUploader
+    App\Service\Uploader\FileUploader:
+        arguments: ['@default.storage', '%env(STORAGE_BASE_URL)%']
