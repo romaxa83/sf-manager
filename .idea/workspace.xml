@@ -2,34 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ff18bb1-91bc-4455-878b-a2d1a4e71642" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/File/File.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/File/Id.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/File/IdType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/File/Info.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Add/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Add/File.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Add/Form.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Add/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Remove/Command.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Remove/Handler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Service/Uploader/File.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Service/Uploader/FileUploader.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Twig/Extension/StoragePathExtension.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/tasks/files.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/sf-manager.iml" afterPath="$PROJECT_DIR$/.idea/sf-manager.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/CalendarController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/CalendarController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/CalendarFetcher.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Form.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Query.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Result.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Widget/Work/Projects/CalendarWidget.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Widget/Work/Projects/OwnTasksWidget.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Widget/Work/Projects/TasksForMeWidget.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/calendar.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/widget/work/projects/calendar.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/widget/work/projects/own-tasks.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/widget/work/projects/tasks-for-me.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/.env.example" afterPath="$PROJECT_DIR$/app/.env.example" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" afterPath="$PROJECT_DIR$/app/composer.json" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" afterPath="$PROJECT_DIR$/app/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/app/config/bundles.php" afterPath="$PROJECT_DIR$/app/config/bundles.php" />
-      <change beforePath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" afterPath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" />
-      <change beforePath="$PROJECT_DIR$/app/config/packages/stof_doctrine_extensions.yaml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yaml" afterPath="$PROJECT_DIR$/app/config/services.yaml" />
+      <change beforePath="$PROJECT_DIR$/app/assets/css/app.scss" afterPath="$PROJECT_DIR$/app/assets/css/app.scss" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php" afterPath="$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php" />
-      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" />
-      <change beforePath="$PROJECT_DIR$/app/symfony.lock" afterPath="$PROJECT_DIR$/app/symfony.lock" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/work/projects/tasks/show.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/work/projects/tasks/show.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php" afterPath="$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Menu/Work/Projects/ProjectMenu.php" afterPath="$PROJECT_DIR$/app/src/Menu/Work/Projects/ProjectMenu.php" />
+      <change beforePath="$PROJECT_DIR$/app/templates/app/home.html.twig" afterPath="$PROJECT_DIR$/app/templates/app/home.html.twig" />
     </list>
     <ignored path="$PROJECT_DIR$/app/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,113 +35,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="files.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/tasks/files.html.twig">
+      <file leaf-file-name="CalendarFetcher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/CalendarFetcher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-444">
+            <state relative-caret-position="1476">
+              <caret line="98" column="2" lean-forward="false" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Result.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calendar.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/calendar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="85" column="6" lean-forward="false" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1026">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
+      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/app/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="75" />
+            <state relative-caret-position="360">
+              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Version20190723182525.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20190723182525.php">
+      <file leaf-file-name="own-tasks.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/own-tasks.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OwnTasksWidget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Projects/OwnTasksWidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1567710869475" expanded="true" signature="658:975" ph="CREATE TABLE... blog_posts" />
-                <marker date="1567710869475" expanded="true" signature="1738:1888" ph="ALTER TABLE blog_posts... " />
-                <marker date="1567710869475" expanded="true" signature="1915:2056" ph="ALTER TABLE blog_posts... " />
-                <marker date="1567710869475" expanded="true" signature="2382:2403" ph="DROP TABLE b... " />
+                <element signature="e#70#119#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/.env">
+      <file leaf-file-name="TasksForMeWidget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Projects/TasksForMeWidget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/tasks/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="231" column="41" lean-forward="true" selection-start-line="226" selection-start-column="34" selection-end-line="231" selection-end-column="41" />
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#11902#11946#0#HTML" expanded="true" />
+                <element signature="e#70#119#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Version20190914075903.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20190914075903.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <marker date="1568459275745" expanded="true" signature="658:914" ph="CREATE TABLE... work_projects_task_files" />
-                <marker date="1568459275745" expanded="true" signature="1695:1859" ph="ALTER TABLE work_projects_task_files... " />
-                <marker date="1568459275745" expanded="true" signature="1886:2053" ph="ALTER TABLE work_projects_task_files... " />
-                <marker date="1568459275745" expanded="true" signature="2379:2414" ph="DROP TABLE w... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Task/Filter/Form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Filter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Task/Filter/Filter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-438">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskFetcher.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskFetcher.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Task/TaskFetcher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1047">
+            <state relative-caret-position="-2521">
               <caret line="82" column="37" lean-forward="false" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasks-for-me.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/tasks-for-me.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -170,23 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/app/blog/post/create.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/ReadModel/Blog/Category/CategoryFetcher.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Blog/UseCase/Post/Create/Command.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Blog/Entity/Post/Post.php" />
-        <option value="$PROJECT_DIR$/app/src/Controller/Blog/PostController.php" />
-        <option value="$PROJECT_DIR$/app/src/Model/Blog/UseCase/Post/Create/Form.php" />
-        <option value="$PROJECT_DIR$/app/templates/override/menu.html.twig" />
-        <option value="$PROJECT_DIR$/app/src/Twig/Extension/MarkdownExtension.php" />
-        <option value="$PROJECT_DIR$/app/assets/css/app.scss" />
-        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/TaskRepository.php" />
-        <option value="$PROJECT_DIR$/app/src/Migrations/Version20190723182525.php" />
-        <option value="$PROJECT_DIR$/app/config/packages/exercise_html_purifier.yaml" />
-        <option value="$PROJECT_DIR$/app/src/Service/Work/Processor/Proccessor.php" />
-        <option value="$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/Driver.php" />
-        <option value="$PROJECT_DIR$/app/src/Service/Work/Processor/Processor.php" />
-        <option value="$PROJECT_DIR$/app/templates/processor/work/task.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/processor/work/member.htm.twig" />
         <option value="$PROJECT_DIR$/app/src/Twig/Extension/Work/ProcessorExtension.php" />
         <option value="$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/MemberDriver.php" />
         <option value="$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/TaskDriver.php" />
@@ -214,13 +183,30 @@
         <option value="$PROJECT_DIR$/app/src/Twig/Extension/StoragePathExtension.php" />
         <option value="$PROJECT_DIR$/app/config/services.yaml" />
         <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" />
-        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php" />
         <option value="$PROJECT_DIR$/app/src/Model/Work/UseCase/Projects/Task/Files/Add/Handler.php" />
         <option value="$PROJECT_DIR$/app/templates/app/work/projects/tasks/files.html.twig" />
         <option value="$PROJECT_DIR$/app/.env.example" />
         <option value="$PROJECT_DIR$/app/.env" />
         <option value="$PROJECT_DIR$/app/templates/app/work/projects/tasks/show.html.twig" />
         <option value="$PROJECT_DIR$/app/src/Migrations/Version20190914075903.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Form.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Query.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/CalendarController.php" />
+        <option value="$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/CalendarController.php" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Result.php" />
+        <option value="$PROJECT_DIR$/app/templates/app/work/projects/calendar.html.twig" />
+        <option value="$PROJECT_DIR$/app/assets/css/app.scss" />
+        <option value="$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php" />
+        <option value="$PROJECT_DIR$/app/src/Menu/Work/Projects/ProjectMenu.php" />
+        <option value="$PROJECT_DIR$/app/src/Widget/Work/Projects/CalendarWidget.php" />
+        <option value="$PROJECT_DIR$/app/templates/widget/work/projects/calendar.html.twig" />
+        <option value="$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/CalendarFetcher.php" />
+        <option value="$PROJECT_DIR$/app/templates/app/home.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/widget/work/projects/tasks-for-me.html.twig" />
+        <option value="$PROJECT_DIR$/app/templates/widget/work/projects/own-tasks.html.twig" />
+        <option value="$PROJECT_DIR$/app/src/Widget/Work/Projects/OwnTasksWidget.php" />
+        <option value="$PROJECT_DIR$/app/src/Widget/Work/Projects/TasksForMeWidget.php" />
       </list>
     </option>
   </component>
@@ -372,11 +358,11 @@
       <path value="$PROJECT_DIR$/app/vendor/league/flysystem-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="827" />
-    <option name="y" value="25" />
-    <option name="width" value="773" />
-    <option name="height" value="875" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="153" />
+    <option name="y" value="107" />
+    <option name="width" value="1417" />
+    <option name="height" value="682" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -394,7 +380,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -411,7 +397,14 @@
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -431,7 +424,14 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Menu" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Menu" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -439,16 +439,9 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Menu" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -524,15 +517,44 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Uploader" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReadModel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Task" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Work" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Projects" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -569,10 +591,24 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="widget" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="widget" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="work" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -583,7 +619,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,15 +631,15 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/widget/work/projects" />
       <recent name="$PROJECT_DIR$/app/src/ReadModel/Blog/Category" />
       <recent name="$PROJECT_DIR$/app/src/Security/Voter/Work/Projects" />
       <recent name="$PROJECT_DIR$/app/templates/app/work/projects/project/settings/departments" />
       <recent name="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project" />
-      <recent name="$PROJECT_DIR$/app/src/Menu/Work/Projects" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -703,27 +739,29 @@
       <workItem from="1568221387894" duration="4475000" />
       <workItem from="1568309081367" duration="2627000" />
       <workItem from="1568311857999" duration="945000" />
-      <workItem from="1568445208410" duration="5465000" />
+      <workItem from="1568445208410" duration="7849000" />
+      <workItem from="1568611426787" duration="4699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313211000" />
+    <option name="totallyTimeSpent" value="320294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="827" y="25" width="773" height="875" extended-state="4" />
+    <frame x="153" y="107" width="1417" height="682" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36726272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24507658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32667875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -768,128 +806,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/Twig/Extension/MarkdownExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/css/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/TaskRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="54" column="1" lean-forward="false" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20190703181928.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20190703183937.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="96" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Twig/Extension/GravatarExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/exercise_html_purifier.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/Driver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Service/Work/Processor/Proccessor.php" />
-    <entry file="file://$PROJECT_DIR$/app/src/Service/Work/Processor/Processor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/processor/work/task.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="108" lean-forward="false" selection-start-line="0" selection-start-column="108" selection-end-line="0" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Twig/Extension/Work/ProcessorExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/TaskDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Service/Work/Processor/Driver/MemberDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/processor/work/member.htm.twig" />
-    <entry file="file://$PROJECT_DIR$/app/templates/processor/work/member.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="87" lean-forward="false" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/public/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/docker/development/nginx.docker">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/docker/development/nginx/default.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -911,9 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#86#134#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -921,9 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="e#86#107#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="35" column="89" lean-forward="false" selection-start-line="35" selection-start-column="89" selection-end-line="35" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,9 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#92#132#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,7 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,9 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#94#116#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,9 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-          <folding>
-            <element signature="e#63#101#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,7 +933,7 @@
         <state relative-caret-position="-822">
           <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="414" selection-end-column="5" />
           <folding>
-            <element signature="e#81#109#0#PHP" expanded="true" />
+            <element signature="e#81#109#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1050,9 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
           <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#66#107#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,19 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#92#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="211" column="13" lean-forward="true" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
-          <folding>
-            <element signature="e#115#163#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,7 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,7 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1096,12 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <marker date="1567710869475" expanded="true" signature="658:975" ph="CREATE TABLE... blog_posts" />
-            <marker date="1567710869475" expanded="true" signature="1738:1888" ph="ALTER TABLE blog_posts... " />
-            <marker date="1567710869475" expanded="true" signature="1915:2056" ph="ALTER TABLE blog_posts... " />
-            <marker date="1567710869475" expanded="true" signature="2382:2403" ph="DROP TABLE b... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-444">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,17 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="231" column="41" lean-forward="true" selection-start-line="226" selection-start-column="34" selection-end-line="231" selection-end-column="41" />
-          <folding>
-            <element signature="e#11902#11946#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,12 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <marker date="1568459275745" expanded="true" signature="658:914" ph="CREATE TABLE... work_projects_task_files" />
-            <marker date="1568459275745" expanded="true" signature="1695:1859" ph="ALTER TABLE work_projects_task_files... " />
-            <marker date="1568459275745" expanded="true" signature="1886:2053" ph="ALTER TABLE work_projects_task_files... " />
-            <marker date="1568459275745" expanded="true" signature="2379:2414" ph="DROP TABLE w... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,7 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,18 +1009,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Task/TaskFetcher.php">
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1047">
-          <caret line="82" column="37" lean-forward="false" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Query/Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/TasksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3582">
+          <caret line="228" column="11" lean-forward="false" selection-start-line="228" selection-start-column="11" selection-end-line="228" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/CalendarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#74#131#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Controller/Work/Projects/Project/CalendarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#81#132#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/work/projects/calendar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="-28">
           <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/css/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="115" column="24" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Menu/Work/MainMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Menu/Work/Projects/ProjectMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Projects/CalendarWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#70#127#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/calendar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="85" column="6" lean-forward="false" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/Result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/task/task-for-me.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/tasks-for-me.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/widget/work/projects/own-tasks.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Projects/OwnTasksWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#70#119#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Widget/Work/Projects/TasksForMeWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#70#119#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Calendar/CalendarFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1476">
+          <caret line="98" column="2" lean-forward="false" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ReadModel/Work/Projects/Task/TaskFetcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2521">
+          <caret line="82" column="37" lean-forward="false" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
           <folding />
         </state>
       </provider>
