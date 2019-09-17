@@ -224,12 +224,12 @@
                                 <a href="{{ path('work.members.show', {'id': file.member.id}) }}">{{ file.member.name.full }}</a>
                             </td>
                             <td style="width: 27px; box-sizing: content-box">
-                                {#<form action="{{ path('work.projects.tasks.files.delete', {'id': task.id, 'file_id': file.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">#}
-                                    {#<input type="hidden" name="token" value="{{ csrf_token('delete-file') }}" />#}
-                                    {#<button type="submit" class="btn btn-sm btn-default">#}
-                                        {#<span class="fa fa-times"></span>#}
-                                    {#</button>#}
-                                {#</form>#}
+                                <form action="{{ path('work.projects.tasks.files.delete', {'id': task.id, 'file_id': file.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                                    <input type="hidden" name="token" value="{{ csrf_token('delete-file') }}" />
+                                    <button type="submit" class="btn btn-sm btn-default">
+                                        <span class="fa fa-times"></span>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     {% endfor %}
@@ -239,6 +239,7 @@
 
             {% if task.content %}
                 <div class="card mb-3">
+                    <div class="card-header">Task Description</div>
                     <div class="card-body pb-0">
                         {{ task.content|markdown|purify|work_processor }}
                         {#{{ task.content|nl2br }}#}
@@ -246,11 +247,11 @@
                 </div>
             {% endif %}
 
-            {#<div class="card">#}
-                {#<div class="card-header">Work</div>#}
-                {#<div class="card-body">#}
-                    {#<div class="direct-chat">#}
-                        {#<div class="direct-chat-messages">#}
+            <div class="card">
+                <div class="card-header">Task Comment</div>
+                <div class="card-body">
+                    <div class="direct-chat">
+                        <div class="direct-chat-messages">
                             {#{% for item in feed.items %}#}
                                 {#{% set comment = item.comment %}#}
                                 {#{% if comment %}#}
@@ -286,16 +287,16 @@
                                     {#</div>#}
                                 {#{% endif %}#}
                             {#{% endfor %}#}
-                        {#</div>#}
-                    {#</div>#}
-                {#</div>#}
-                {#<div class="card-body border-top border-light">#}
-                    {#{{ form_start(commentForm) }}#}
-                    {#{{ form_widget(commentForm) }}#}
-                    {#<button type="submit" class="btn btn-primary">Send</button>#}
-                    {#{{ form_end(commentForm) }}#}
-                {#</div>#}
-            {#</div>#}
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border-top border-light">
+                    {{ form_start(commentForm) }}
+                    {{ form_widget(commentForm) }}
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    {{ form_end(commentForm) }}
+                </div>
+            </div>
 
         </div>
         <div class="col-md-4">
