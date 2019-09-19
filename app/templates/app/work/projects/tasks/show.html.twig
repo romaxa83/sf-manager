@@ -252,41 +252,41 @@
                 <div class="card-body">
                     <div class="direct-chat">
                         <div class="direct-chat-messages">
-                            {#{% for item in feed.items %}#}
-                                {#{% set comment = item.comment %}#}
-                                {#{% if comment %}#}
-                                    {#<div class="direct-chat-msg">#}
-                                        {#<div class="direct-chat-info clearfix">#}
-                                            {#<span class="direct-chat-name pull-left">{{ comment.author_name }}</span>#}
-                                            {#<span class="direct-chat-timestamp pull-right">{{ comment.date|date('Y-m-d H:i:s') }}</span>#}
-                                        {#</div>#}
-                                        {#<img class="direct-chat-img" src="{{ gravatar(comment.author_email, 40) }}" alt="">#}
-                                        {#<div class="direct-chat-text">#}
-                                            {#{{ comment.text|markdown|purify|work_processor }}#}
-                                            {#{% if is_granted('manage', comment) %}#}
-                                                {#<div class="controls mb-0">#}
-                                                    {#<a href="{{ path('work.projects.tasks.comments.edit', {'task_id': task.id, 'id': comment.id}) }}" class="btn btn-sm btn-outline-secondary">#}
-                                                        {#<span class="fa fa-pencil"></span>#}
-                                                    {#</a>#}
-                                                    {#<form action="{{ path('work.projects.tasks.comments.delete', {'task_id': task.id, 'id': comment.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">#}
-                                                        {#<input type="hidden" name="token" value="{{ csrf_token('delete-comment') }}" />#}
-                                                        {#<button type="submit" class="btn btn-sm btn-outline-secondary">#}
-                                                            {#<span class="fa fa-times"></span>#}
-                                                        {#</button>#}
-                                                    {#</form>#}
-                                                {#</div>#}
-                                            {#{% endif %}#}
-                                        {#</div>#}
-                                    {#</div>#}
-                                {#{% endif %}#}
-                                {#{% set action = item.action %}#}
-                                {#{% if action %}#}
-                                    {#<div class="direct-chat-action">#}
-                                        {#{{ action.date|date('Y-m-d H:i') }}#}
-                                        {#{{ work_projects_action_row(action) }}#}
-                                    {#</div>#}
-                                {#{% endif %}#}
-                            {#{% endfor %}#}
+                            {% for item in feed.items %}
+                                {% set comment = item.comment %}
+                                {% if comment %}
+                                    <div class="direct-chat-msg">
+                                        <div class="direct-chat-info clearfix">
+                                            <span class="direct-chat-name pull-left">{{ comment.author_name }}</span>
+                                            <span class="direct-chat-timestamp pull-right">{{ comment.date|date('Y-m-d H:i:s') }}</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="{{ gravatar(comment.author_email, 40) }}" alt="">
+                                        <div class="direct-chat-text">
+                                            {{ comment.text|markdown|purify|work_processor }}
+                                            {% if is_granted('manage', comment) %}
+                                                <div class="controls mb-0">
+                                                    <a href="{{ path('work.projects.tasks.comments.edit', {'task_id': task.id, 'id': comment.id}) }}" class="btn btn-sm btn-outline-secondary">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </a>
+                                                    <form action="{{ path('work.projects.tasks.comments.delete', {'task_id': task.id, 'id': comment.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                                                        <input type="hidden" name="token" value="{{ csrf_token('delete-comment') }}" />
+                                                        <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                                            <span class="fa fa-times"></span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% set action = item.action %}
+                                {% if action %}
+                                    <div class="direct-chat-action">
+                                        {{ action.date|date('Y-m-d H:i') }}
+                                        {{ work_projects_action_row(action) }}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

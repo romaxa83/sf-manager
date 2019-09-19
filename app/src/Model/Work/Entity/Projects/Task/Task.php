@@ -9,9 +9,9 @@ use App\Model\EventsTrait;
 use App\Model\Work\Entity\Members\Member\Id as MemberId;
 use App\Model\Work\Entity\Members\Member\Member;
 use App\Model\Work\Entity\Projects\Project\Project;
-//use App\Model\Work\Entity\Projects\Task\Change\Change;
-//use App\Model\Work\Entity\Projects\Task\Change\Id as ChangeId;
-//use App\Model\Work\Entity\Projects\Task\Change\Set;
+use App\Model\Work\Entity\Projects\Task\Change\Change;
+use App\Model\Work\Entity\Projects\Task\Change\Id as ChangeId;
+use App\Model\Work\Entity\Projects\Task\Change\Set;
 use App\Model\Work\Entity\Projects\Task\File\File;
 use App\Model\Work\Entity\Projects\Task\File\Id as FileId;
 use App\Model\Work\Entity\Projects\Task\File\Info;
@@ -136,12 +136,12 @@ class Task implements AggregateRoot
      */
     private $executors;
 
-//    /**
-//     * @var Change[]|ArrayCollection
-//     * @ORM\OneToMany(targetEntity="App\Model\Work\Entity\Projects\Task\Change\Change", mappedBy="task", orphanRemoval=true, cascade={"persist"})
-//     * @ORM\OrderBy({"id" = "ASC"})
-//     */
-//    private $changes;
+    /**
+     * @var Change[]|ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Model\Work\Entity\Projects\Task\Change\Change", mappedBy="task", orphanRemoval=true, cascade={"persist"})
+     * @ORM\OrderBy({"id" = "ASC"})
+     */
+    private $changes;
 
     public function __construct(
         Id $id,
@@ -166,27 +166,27 @@ class Task implements AggregateRoot
         $this->priority = $priority;
         $this->status = Status::new();
         $this->executors = new ArrayCollection();
-//        $this->changes = new ArrayCollection();
-//        $this->addChange($author, $date, Set::forNewTask($project->getId(), $name, $content, $type, $priority));
+        $this->changes = new ArrayCollection();
+        $this->addChange($author, $date, Set::forNewTask($project->getId(), $name, $content, $type, $priority));
     }
 
     public function edit(Member $actor, \DateTimeImmutable $date, string $name, ?string $content): void
     {
-//        if ($name !== $this->name) {
+        if ($name !== $this->name) {
             $this->name = $name;
-//            $this->addChange($actor, $date, Set::fromName($name));
-//        }
-//        if ($content !== $this->content) {
+            $this->addChange($actor, $date, Set::fromName($name));
+        }
+        if ($content !== $this->content) {
             $this->content = $content;
-//            $this->addChange($actor, $date, Set::fromContent($content));
-//        }
+            $this->addChange($actor, $date, Set::fromContent($content));
+        }
         $this->recordEvent(new Event\TaskEdited($actor->getId(), $this->id, $name, $content));
     }
 
     public function addFile(Member $actor, \DateTimeImmutable $date, FileId $id, Info $info): void
     {
         $this->files->add(new File($this, $id, $actor, $date, $info));
-//        $this->addChange($actor, $date, Set::fromFile($id));
+        $this->addChange($actor, $date, Set::fromFile($id));
 //        $this->recordEvent(new Event\TaskFileAdded($actor->getId(), $this->id, $id, $info));
     }
 
@@ -195,7 +195,7 @@ class Task implements AggregateRoot
         foreach ($this->files as $current) {
             if ($current->getId()->isEqual($id)) {
                 $this->files->removeElement($current);
-//                $this->addChange($actor, $date, Set::fromRemovedFile($current->getId()));
+                $this->addChange($actor, $date, Set::fromRemovedFile($current->getId()));
 //                $this->recordEvent(new Event\TaskFileRemoved($actor->getId(), $this->id, $id, $current->getInfo()));
                 return;
             }
@@ -211,8 +211,7 @@ class Task implements AggregateRoot
         if (!$this->executors->count()) {
             throw new \DomainException('Task does not contain executors.');
         }
-//        $this->changeStatus($actor, $date, Status::working());
-//        $this->changeStatus($date, Status::working());
+        $this->changeStatus($actor, $date, Status::working());
     }
 
     public function setChildOf(Member $actor, \DateTimeImmutable $date, Task $parent): void
@@ -228,32 +227,32 @@ class Task implements AggregateRoot
         }
         while ($current && $current = $current->getParent());
         $this->parent = $parent;
-//        $this->addChange($actor, $date, Set::fromParent($parent->getId()));
+        $this->addChange($actor, $date, Set::fromParent($parent->getId()));
     }
 
     public function removeChildOf(Member $actor, \DateTimeImmutable $date): void
     {
         $this->parent = null;
-//        $this->addChange($actor, $date, Set::forRemovedParent());
+        $this->addChange($actor, $date, Set::forRemovedParent());
     }
-//
-//    public function setRoot(): void
-//    {
-//        $this->parent = null;
-//    }
-//
+
+    public function setRoot(): void
+    {
+        $this->parent = null;
+    }
+
     public function plan(Member $actor, \DateTimeImmutable $date, \DateTimeImmutable $plan): void
     {
         $this->planDate = $plan;
-//        $this->addChange($actor, $date, Set::fromPlan($plan));
-        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, $date));
+        $this->addChange($actor, $date, Set::fromPlan($plan));
+//        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, $date));
     }
 
     public function removePlan(Member $actor, \DateTimeImmutable $date): void
     {
         $this->planDate = null;
-//        $this->addChange($actor, $date, Set::forRemovedPlan());
-        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, null));
+        $this->addChange($actor, $date, Set::forRemovedPlan());
+//        $this->recordEvent(new Event\TaskPlanChanged($actor->getId(), $this->id, null));
     }
 
     public function move(Member $actor, \DateTimeImmutable $date, Project $project): void
@@ -262,7 +261,7 @@ class Task implements AggregateRoot
             throw new \DomainException('Project is already same.');
         }
         $this->project = $project;
-//        $this->addChange($actor, $date, Set::fromProject($project->getId()));
+        $this->addChange($actor, $date, Set::fromProject($project->getId()));
     }
 
     public function changeType(Member $actor, \DateTimeImmutable $date, Type $type): void
@@ -271,8 +270,8 @@ class Task implements AggregateRoot
             throw new \DomainException('Type is already same.');
         }
         $this->type = $type;
-//        $this->addChange($actor, $date, Set::fromType($type));
-        $this->recordEvent(new Event\TaskTypeChanged($actor->getId(), $this->id, $type));
+        $this->addChange($actor, $date, Set::fromType($type));
+//        $this->recordEvent(new Event\TaskTypeChanged($actor->getId(), $this->id, $type));
     }
 
     public function changeStatus(Member $actor, \DateTimeImmutable $date, Status $status): void
@@ -281,8 +280,8 @@ class Task implements AggregateRoot
             throw new \DomainException('Status is already same.');
         }
         $this->status = $status;
-//        $this->addChange($actor, $date, Set::fromStatus($status));
-        $this->recordEvent(new Event\TaskStatusChanged($actor->getId(), $this->id, $status));
+        $this->addChange($actor, $date, Set::fromStatus($status));
+//        $this->recordEvent(new Event\TaskStatusChanged($actor->getId(), $this->id, $status));
         if (!$status->isNew() && !$this->startDate) {
             $this->startDate = $date;
         }
@@ -303,8 +302,8 @@ class Task implements AggregateRoot
             throw new \DomainException('Progress is already same.');
         }
         $this->progress = $progress;
-//        $this->addChange($actor, $date, Set::fromProgress($progress));
-        $this->recordEvent(new Event\TaskProgressChanged($actor->getId(), $this->id, $progress));
+        $this->addChange($actor, $date, Set::fromProgress($progress));
+//        $this->recordEvent(new Event\TaskProgressChanged($actor->getId(), $this->id, $progress));
     }
 
     public function changePriority(Member $actor, \DateTimeImmutable $date, int $priority): void
@@ -314,8 +313,8 @@ class Task implements AggregateRoot
             throw new \DomainException('Priority is already same.');
         }
         $this->priority = $priority;
-//        $this->addChange($actor, $date, Set::fromPriority($priority));
-        $this->recordEvent(new Event\TaskPriorityChanged($actor->getId(), $this->id, $priority));
+        $this->addChange($actor, $date, Set::fromPriority($priority));
+//        $this->recordEvent(new Event\TaskPriorityChanged($actor->getId(), $this->id, $priority));
     }
 
     public function hasExecutor(MemberId $id): bool
@@ -334,8 +333,8 @@ class Task implements AggregateRoot
             throw new \DomainException('Executor is already assigned.');
         }
         $this->executors->add($executor);
-//        $this->addChange($actor, $date, Set::fromExecutor($executor->getId()));
-        $this->recordEvent(new Event\TaskExecutorAssigned($actor->getId(), $this->id, $executor->getId()));
+        $this->addChange($actor, $date, Set::fromExecutor($executor->getId()));
+//        $this->recordEvent(new Event\TaskExecutorAssigned($actor->getId(), $this->id, $executor->getId()));
     }
 
     public function revokeExecutor(Member $actor, \DateTimeImmutable $date, MemberId $id): void
@@ -343,8 +342,8 @@ class Task implements AggregateRoot
         foreach ($this->executors as $current) {
             if ($current->getId()->isEqual($id)) {
                 $this->executors->removeElement($current);
-//                $this->addChange($actor, $date, Set::fromRevokedExecutor($current->getId()));
-                $this->recordEvent(new Event\TaskExecutorRevoked($actor->getId(), $this->id, $current->getId()));
+                $this->addChange($actor, $date, Set::fromRevokedExecutor($current->getId()));
+//                $this->recordEvent(new Event\TaskExecutorRevoked($actor->getId(), $this->id, $current->getId()));
                 return;
             }
         }
@@ -447,22 +446,22 @@ class Task implements AggregateRoot
         return $this->executors->toArray();
     }
 
-//    /**
-//     * @return Change[]
-//     */
-//    public function getChanges(): array
-//    {
-//        return $this->changes->toArray();
-//    }
+    /**
+     * @return Change[]
+     */
+    public function getChanges(): array
+    {
+        return $this->changes->toArray();
+    }
 
-//    private function addChange(Member $actor, \DateTimeImmutable $date, Set $set): void
-//    {
-//        if ($last = $this->changes->last()) {
-//            /** @var Change $last */
-//            $next = $last->getId()->next();
-//        } else {
-//            $next = ChangeId::first();
-//        }
-//        $this->changes->add(new Change($this, $next, $actor, $date, $set));
-//    }
+    private function addChange(Member $actor, \DateTimeImmutable $date, Set $set): void
+    {
+        if ($last = $this->changes->last()) {
+            /** @var Change $last */
+            $next = $last->getId()->next();
+        } else {
+            $next = ChangeId::first();
+        }
+        $this->changes->add(new Change($this, $next, $actor, $date, $set));
+    }
 }

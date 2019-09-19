@@ -22,8 +22,8 @@ use App\Model\Work\UseCase\Projects\Task\Take;
 use App\Model\Work\UseCase\Projects\Task\TakeAndStart;
 use App\Model\Work\UseCase\Projects\Task\Type;
 use App\ReadModel\Work\Members\Member\MemberFetcher;
-//use App\ReadModel\Work\Projects\Action\ActionFetcher;
-//use App\ReadModel\Work\Projects\Action\Feed\Feed;
+use App\ReadModel\Work\Projects\Action\ActionFetcher;
+use App\ReadModel\Work\Projects\Action\Feed\Feed;
 use App\ReadModel\Work\Projects\Task\CommentFetcher;
 use App\ReadModel\Work\Projects\Task\Filter;
 use App\ReadModel\Work\Projects\Task\TaskFetcher;
@@ -568,7 +568,7 @@ class TasksController extends AbstractController
      * @param MemberFetcher $members
      * @param TaskFetcher $tasks
      * @param CommentFetcher $comments
-//     * @param ActionFetcher $actions
+     * @param ActionFetcher $actions
      * @param Status\Handler $statusHandler
      * @param Progress\Handler $progressHandler
      * @param Type\Handler $typeHandler
@@ -582,7 +582,7 @@ class TasksController extends AbstractController
         MemberFetcher $members,
         TaskFetcher $tasks,
         CommentFetcher $comments,
-//        ActionFetcher $actions,
+        ActionFetcher $actions,
         Status\Handler $statusHandler,
         Progress\Handler $progressHandler,
         Type\Handler $typeHandler,
@@ -676,17 +676,17 @@ class TasksController extends AbstractController
             }
         }
 
-//        $feed = new Feed(
-//            $actions->allForTask($task->getId()->getValue()),
-//            $comments->allForTask($task->getId()->getValue())
-//        );
+        $feed = new Feed(
+            $actions->allForTask($task->getId()->getValue()),
+            $comments->allForTask($task->getId()->getValue())
+        );
 
         return $this->render('app/work/projects/tasks/show.html.twig', [
             'project' => $task->getProject(),
             'task' => $task,
             'member' => $member,
             'children' => $tasks->childrenOf($task->getId()->getValue()),
-//            'feed' => $feed,
+            'feed' => $feed,
             'statusForm' => $statusForm->createView(),
             'progressForm' => $progressForm->createView(),
             'typeForm' => $typeForm->createView(),

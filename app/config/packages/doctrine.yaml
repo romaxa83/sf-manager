@@ -16,6 +16,9 @@ doctrine:
             collate: -
 
         url: '%env(resolve:DATABASE_URL)%'
+        # игнорируем все таблицы у которых название не `work_projects_tasks_seq`
+        schema_filter: '~^(?!work_projects_tasks_seq)~'
+
         types:
             #свои типы данных
             user_user_id: 'App\Model\User\Entity\User\IdType'
@@ -38,6 +41,7 @@ doctrine:
             blog_post_status: 'App\Model\Blog\Entity\Post\StatusType'
             comment_comment_id: 'App\Model\Comment\Entity\Comment\IdType'
             comment_comment_author_id: 'App\Model\Comment\Entity\Comment\AuthorIdType'
+            work_projects_task_change_id: 'App\Model\Work\Entity\Projects\Task\Change\IdType'
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
