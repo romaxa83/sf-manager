@@ -78,3 +78,10 @@ confirm-user:
 
 change-role:
 	docker-compose run --rm app-php-cli php bin/console user:role
+
+#запуск воркера для отправки сообщений в фоне
+worker-start:
+	docker-compose run --rm app-php-cli php bin/console messenger:consume async
+
+worker-start-logs:
+	docker-compose run --rm app-php-cli php bin/console messenger:consume async -vv

@@ -23,6 +23,7 @@ class Flusher
     {
         $this->em->flush();
 
+        //запускаем все события, после сохранение, если они есть
         foreach ($roots as $root) {
             $this->dispatcher->dispatch($root->releaseEvents());
         }

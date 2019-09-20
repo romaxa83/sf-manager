@@ -37,6 +37,22 @@ services:
           - app-postgres
           - app-redis
 
+    app-queue-worker:
+        build:
+            context: ./app/docker/dev
+            dockerfile: php-cli.docker
+#        restart: always
+        volumes:
+            - ./app:/app
+            - composer:/root/.composer/cache
+        depends_on:
+            - app-postgres
+            - app-redis
+            - app-queue-redis
+            - storage
+            - mailer
+        command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && php bin/console messenger:consume async -vv"
+
     app-postgres: 
         image: postgres:11.2-alpine
         environment:
@@ -49,11 +65,12 @@ services:
             - "54321:5432"
 
     app-nodejs:
-            image: node:10.11-jessie
-            volumes:
-                - ./app:/var/www/app
-            working_dir: /var/www/app
-            tty: true  #позволяет процесу nodejs висеть постояно
+        image: node:10.11-jessie
+        volumes:
+            - ./app:/var/www/app
+        working_dir: /var/www/app
+        tty: true  #позволяет процесу nodejs висеть постояно
+
     pgadmin:
         image: dpage/pgadmin4
         depends_on:
@@ -70,6 +87,11 @@ services:
         volumes:
             - ./app:/data
         command: redis-server --requirepass secret
+
+    app-queue-redis:
+        image: redis:5.0-alpine
+        volumes:
+            - app-queue-redis:/data
 
     portainer:
         image: portainer/portainer
@@ -108,3 +130,4 @@ volumes:
     composer:  
     app-redis:
     portainer_data:
+    app-queue-redis:
