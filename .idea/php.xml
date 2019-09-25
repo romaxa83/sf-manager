@@ -137,6 +137,7 @@
       <path value="$PROJECT_DIR$/app/vendor/exercise/htmlpurifier-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/app/vendor/league/flysystem-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/centrifugal/phpcent" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

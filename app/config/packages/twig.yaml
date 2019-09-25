@@ -3,3 +3,6 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes: ['bootstrap_4_layout.html.twig']
+    # обьявляем глобальную переменую
+    globals:
+        centrifugo_url: '%env(CENTRIFUGO_WS_HOST)%/connection/websocket'

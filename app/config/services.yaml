@@ -49,13 +49,20 @@ services:
         arguments: ['PT1H']
 
     # подключаем redis
-    Predis\Client:
-        arguments:
-            - '%env(REDIS_URL)%'
+    Redis:
+        class: Redis
+        calls:
+            -   method: connect
+                arguments:
+                    - '%env(REDIS_HOST)%'
+            -   method: auth
+                arguments:
+                    - '%env(REDIS_PASSWORD)%'
     # передаем классу для хранения сессий клиент редиса
     Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler:
         arguments:
-            - '@Predis\Client'
+            - '@Redis'
+
     App\Widget\:
         resource: '../src/Widget'
         tags: ['twig.extension']
@@ -96,3 +103,9 @@ services:
     # регистрируем fileUploader
     App\Service\Uploader\FileUploader:
         arguments: ['@default.storage', '%env(STORAGE_BASE_URL)%']
+
+    phpcent\Client:
+        arguments:
+            - '%env(CENTRIFUGO_API_HOST)%/api'
+            - '%env(CENTRIFUGO_API_KEY)%'
+            - '%env(CENTRIFUGO_SECRET)%'

@@ -5,7 +5,7 @@ services:
             context: ./app/docker/dev
             dockerfile: nginx.docker
         volumes:
-            - ./app:/var/www/app
+            - ./app:/app
         depends_on:
             - app-php-fpm
         ports:
@@ -15,33 +15,20 @@ services:
         build:
             context: ./app/docker/dev
             dockerfile: php-fpm.docker
-        environment:
-            APP_DEBUG: 1    
         volumes:
-            - ./app:/var/www/app
+            - ./app:/app
         depends_on:
-          - app-postgres
-          - app-redis
+            - app-postgres
+            - app-redis
+            - app-queue-redis
+            - storage
+            - mailer
+            - centrifugo
 
     app-php-cli:
         build:
             context: ./app/docker/dev
             dockerfile: php-cli.docker
-        environment:
-            APP_DEBUG: 1     
-        volumes:
-            - ./app:/var/www/app
-            - composer:/root/.composer/cache #кешируем данные composer
-        working_dir: /var/www/app
-        depends_on:
-          - app-postgres
-          - app-redis
-
-    app-queue-worker:
-        build:
-            context: ./app/docker/dev
-            dockerfile: php-cli.docker
-#        restart: always
         volumes:
             - ./app:/app
             - composer:/root/.composer/cache
@@ -51,59 +38,77 @@ services:
             - app-queue-redis
             - storage
             - mailer
+            - centrifugo
+
+    app-queue-worker:
+        build:
+            context: ./app/docker/dev
+            dockerfile: php-cli.docker
+        volumes:
+            - ./app:/app
+            - composer:/root/.composer/cache
+        depends_on:
+            - app-postgres
+            - app-redis
+            - app-queue-redis
+            - storage
+            - mailer
+            - centrifugo
         command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && php bin/console messenger:consume async -vv"
 
-    app-postgres: 
-        image: postgres:11.2-alpine
-        environment:
-            - POSTGRES_USER=app
-            - POSTGRES_PASSWORD=secret
-            - POSTGRES_DB=app  
-        volumes:
-            - ./app/var/docker/postgres:/var/lib/postgresql/data
-        ports: 
-            - "54321:5432"
+#    app-node-watch:
+#        image: node:12.7-alpine
+#        volumes:
+#            - ./app:/app
+#        working_dir: /app
+#        command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && npm run watch"
 
     app-nodejs:
         image: node:10.11-jessie
         volumes:
             - ./app:/var/www/app
         working_dir: /var/www/app
-        tty: true  #позволяет процесу nodejs висеть постояно
+        tty: true  #позволяет процесу nodejs висеть постояноо
 
+    app-postgres:
+        image: postgres:11.2-alpine
+        volumes:
+#            - app-postgres:/var/lib/postgresql/data
+            - ./app/var/docker/postgres:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: app
+            POSTGRES_PASSWORD: secret
+            POSTGRES_DB: app
+        ports:
+            - "54321:5432"
     pgadmin:
         image: dpage/pgadmin4
         depends_on:
             - app-postgres
         ports:
-            - "8083:80"
+            - "8084:80"
         environment:
             PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
             PGADMIN_DEFAULT_PASSWORD: admin
         restart: unless-stopped
 
     app-redis:
-        image: redis:3.0-alpine
+        image: redis:5.0-alpine
         volumes:
-            - ./app:/data
-        command: redis-server --requirepass secret
+            - app-redis:/data
+        command:
+            - 'redis-server'
+            - '--databases 2'
+            - '--save 900 1'
+            - '--save 300 10'
+            - '--save 60 10000'
+            - '--requirepass secret'
 
     app-queue-redis:
         image: redis:5.0-alpine
         volumes:
             - app-queue-redis:/data
 
-    portainer:
-        image: portainer/portainer
-        command: -H unix:///var/run/docker.sock
-        restart: always
-        ports:
-            - 9000:9000
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - portainer_data:/data
-
-    #storage для хранения файлов
     storage:
         build:
             context: ./storage/docker/development
@@ -126,8 +131,184 @@ services:
         ports:
             - "8082:8025"
 
+    centrifugo:
+        image: centrifugo/centrifugo:v2.2
+        ulimits:
+            nofile:
+                soft: 65536
+                hard: 65536
+        environment:
+            CENTRIFUGO_SECRET: secret
+            CENTRIFUGO_API_KEY: secret
+        volumes:
+            - ./centrifugo/docker/development/centrifugo:/centrifugo
+        ports:
+            - "8083:8000"
+        command: centrifugo --admin --admin_insecure
+
+    portainer:
+        image: portainer/portainer
+        command: -H unix:///var/run/docker.sock
+        restart: always
+        ports:
+            - 9000:9000
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainer:/data
+
 volumes:
-    composer:  
+#    app-postgres:
     app-redis:
-    portainer_data:
     app-queue-redis:
+    composer:
+    portainer:
+
+#version: '3'
+#services:
+#    app-nginx:
+#        build:
+#            context: ./app/docker/dev
+#            dockerfile: nginx.docker
+#        volumes:
+#            - ./app:/var/www/app
+#        depends_on:
+#            - app-php-fpm
+#        ports:
+#            - "8080:80"
+#
+#    app-php-fpm:
+#        build:
+#            context: ./app/docker/dev
+#            dockerfile: php-fpm.docker
+##        environment:
+##            APP_DEBUG: 1
+#        volumes:
+#            - ./app:/var/www/app
+#        depends_on:
+#          - app-postgres
+#          - app-redis
+#
+#    app-php-cli:
+#        build:
+#            context: ./app/docker/dev
+#            dockerfile: php-cli.docker
+##        environment:
+##            APP_DEBUG: 1
+#        volumes:
+##            - ./app:/var/www/app
+#            - ./app:/app
+#            - composer:/root/.composer/cache #кешируем данные composer
+##        working_dir: /var/www/app
+#        depends_on:
+#          - app-postgres
+#          - app-redis
+#
+#    app-queue-worker:
+#        build:
+#            context: ./app/docker/dev
+#            dockerfile: php-cli.docker
+##        restart: always
+#        volumes:
+#            - ./app:/app
+#            - composer:/root/.composer/cache
+#        depends_on:
+#            - app-postgres
+#            - app-redis
+#            - app-queue-redis
+#            - storage
+#            - mailer
+#        command: sh -c "until [ -f .ready ] ; do sleep 1 ; done && php bin/console messenger:consume async -vv"
+#
+#    app-postgres:
+#        image: postgres:11.2-alpine
+#        environment:
+#            - POSTGRES_USER=app
+#            - POSTGRES_PASSWORD=secret
+#            - POSTGRES_DB=app
+#        volumes:
+#            - ./app/var/docker/postgres:/var/lib/postgresql/data
+#        ports:
+#            - "54321:5432"
+#
+#    app-nodejs:
+#        image: node:10.11-jessie
+#        volumes:
+#            - ./app:/var/www/app
+#        working_dir: /var/www/app
+#        tty: true  #позволяет процесу nodejs висеть постояно
+#
+#    pgadmin:
+#        image: dpage/pgadmin4
+#        depends_on:
+#            - app-postgres
+#        ports:
+#            - "8083:80"
+#        environment:
+#            PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+#            PGADMIN_DEFAULT_PASSWORD: admin
+#        restart: unless-stopped
+#
+#    app-redis:
+#        image: redis:3.0-alpine
+#        volumes:
+#            - ./app:/data
+#        command: redis-server --requirepass secret
+#
+#    app-queue-redis:
+#        image: redis:5.0-alpine
+#        volumes:
+#            - app-queue-redis:/data
+#
+#    portainer:
+#        image: portainer/portainer
+#        command: -H unix:///var/run/docker.sock
+#        restart: always
+#        ports:
+#            - 9000:9000
+#        volumes:
+#            - /var/run/docker.sock:/var/run/docker.sock
+#            - portainer_data:/data
+#
+#    #storage для хранения файлов
+#    storage:
+#        build:
+#            context: ./storage/docker/development
+#            dockerfile: nginx.docker
+#        volumes:
+#            - ./storage:/app
+#        ports:
+#            - "8081:80"
+#    storage-ftp:
+#        image: stilliard/pure-ftpd
+#        environment:
+#            FTP_USER_NAME: app
+#            FTP_USER_PASS: secret
+#            FTP_USER_HOME: /app
+#        volumes:
+#            - ./storage/public:/app
+#
+#    mailer:
+#        image: mailhog/mailhog
+#        ports:
+#            - "8082:8025"
+#
+#    centrifugo:
+#        image: centrifugo/centrifugo:v2.2
+#        ulimits:
+#            nofile:
+#                soft: 65536
+#                hard: 65536
+#        environment:
+#            CENTRIFUGO_SECRET: secret
+#            CENTRIFUGO_API_KEY: secret
+#        volumes:
+#            - ./centrifugo/docker/development/centrifugo:/centrifugo
+#        ports:
+#            - "8084:8000"
+#        command: centrifugo --admin --admin_insecure
+#
+#volumes:
+#    composer:
+#    app-redis:
+#    portainer_data:
+#    app-queue-redis:

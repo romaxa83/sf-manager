@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/centrifugal/phpcent" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
@@ -147,6 +148,7 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
+          <root url="file://$MODULE_DIR$/app/vendor/centrifugal/phpcent" />
           <root url="file://$MODULE_DIR$/app/vendor/composer" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
@@ -278,6 +280,7 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/app/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/app/vendor/cebe/markdown" />
+          <root url="file://$MODULE_DIR$/app/vendor/centrifugal/phpcent" />
           <root url="file://$MODULE_DIR$/app/vendor/composer" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
           <root url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
