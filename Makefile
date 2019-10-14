@@ -1,5 +1,5 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up app-init cp-env permission doctrine-migrate
+init: docker-down docker-pull docker-build docker-up app-init cp-env permission doctrine-migrate manager-oauth-keys
 test: app-test
 
 cp-env:
@@ -85,3 +85,10 @@ worker-start:
 
 worker-start-logs:
 	docker-compose run --rm app-php-cli php bin/console messenger:consume async -vv
+
+#генерация ключей для oauth2
+manager-oauth-keys:
+	docker-compose run --rm app-php-cli mkdir -p var/oauth
+	docker-compose run --rm app-php-cli openssl genrsa -out var/oauth/private.key 2048
+	docker-compose run --rm app-php-cli openssl rsa -in var/oauth/private.key -pubout -out var/oauth/public.key
+	docker-compose run --rm app-php-cli chmod 644 var/oauth/private.key var/oauth/public.key

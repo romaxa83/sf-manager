@@ -1,3 +1,15 @@
+api:
+    resource: ../../src/Controller/Api/
+    prefix: /api
+    name_prefix: api.
+    # указываем оставлять/удалять слеш после /api
+    trailing_slash_on_root: true
+    type: annotation
+    # формат отдаваемых данных в json (и ошибки)
+    defaults:
+        _format: json
+
+# указывает что все контролеры подгружать по аннотации
 controllers:
     resource: ../../src/Controller/
     type: annotation

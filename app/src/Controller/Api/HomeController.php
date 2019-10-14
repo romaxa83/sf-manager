@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Controller\Api;
 
-use phpcent\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,14 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/",name="home")
+     * @Route("", name="home", methods={"GET"})
+     * @return Response
      */
-    public function index(Client $centrifugo): Response
+    public function home(): Response
     {
-        $centrifugo->publish('alerts', [
-            'message' => 'Halo!'
+        return $this->json([
+            'name' => 'JSON API',
         ]);
-
-        return $this->render('app/home.html.twig');
     }
 }

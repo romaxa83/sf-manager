@@ -138,6 +138,15 @@
       <path value="$PROJECT_DIR$/app/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/app/vendor/league/flysystem-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/centrifugal/phpcent" />
+      <path value="$PROJECT_DIR$/app/vendor/trikoder/oauth2-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/app/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/app/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/app/vendor/league/event" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/psr-http-message-bridge" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

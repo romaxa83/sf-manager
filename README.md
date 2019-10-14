@@ -49,12 +49,12 @@ $ make worker-start-logs
 ```
 ##### Cenrifugo
 используеться как websocket-server для сообщений в браузер
-доступ к админке http://localhost:8084
+доступ к админке http://localhost:8083
 
 ##### База данных
 используеться **postgesql**
 
-pgadmin доступна по адресу http://localhost:8083
+pgadmin доступна по адресу http://localhost:8084
 
 - login : ***pgadmin4@pgadmin.org***
 - password : ***admin***
