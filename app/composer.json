@@ -42,7 +42,8 @@
         "symfony/yaml": "4.3.*",
         "tetranz/select2entity-bundle": "^2.10",
         "trikoder/oauth2-bundle": "^2.0",
-        "webmozart/assert": "^1.4"
+        "webmozart/assert": "^1.4",
+        "zircote/swagger-php": "^3.0"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

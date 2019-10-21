@@ -44,6 +44,9 @@ app-composer-install:
 cli:
 	docker-compose run --rm app-php-cli php bin/app.php
 
+console:
+	docker-compose run --rm app-php-cli php bin/console
+
 #для работы с doctine
 doctrine-diff:
 	docker-compose run --rm app-php-cli php bin/console doctrine:migrations:diff
@@ -92,3 +95,7 @@ manager-oauth-keys:
 	docker-compose run --rm app-php-cli openssl genrsa -out var/oauth/private.key 2048
 	docker-compose run --rm app-php-cli openssl rsa -in var/oauth/private.key -pubout -out var/oauth/public.key
 	docker-compose run --rm app-php-cli chmod 644 var/oauth/private.key var/oauth/public.key
+
+#генерация документации для api
+api-docks:
+	docker-compose run --rm app-php-cli php bin/console api:docs

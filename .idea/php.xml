@@ -147,6 +147,7 @@
       <path value="$PROJECT_DIR$/app/vendor/league/oauth2-server" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

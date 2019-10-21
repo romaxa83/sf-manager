@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controller\Api\Profile;
 
 use App\Model\User\UseCase\Name;
-//use OpenApi\Annotations as OA;
+use OpenApi\Annotations as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,6 +26,28 @@ class NameController extends AbstractController
     }
 
     /**
+     * @OA\Put(
+     *     path="/profile/name",
+     *     tags={"Profile"},
+     *     @OA\RequestBody(
+     *         @OA\JsonContent(
+     *             type="object",
+     *             required={"first", "last"},
+     *             @OA\Property(property="first", type="string"),
+     *             @OA\Property(property="last", type="string"),
+     *         ),
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Success response",
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="Errors",
+     *         @OA\JsonContent(ref="#/components/schemas/ErrorModel")
+     *     ),
+     *     security={{"oauth2": {"common"}}}
+     * )
      * @Route("/profile/name", name="profile.name", methods={"PUT"})
      * @param Request $request
      * @param Name\Handler $handler
