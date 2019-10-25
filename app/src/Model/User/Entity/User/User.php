@@ -91,6 +91,12 @@ class User
      */
     private $role;
 
+    /**
+     * @ORM\Version()
+     * @ORM\Column(type="integer")
+     */
+    private $version;
+
 	private function __construct(
 	    Id $id,
         \DateTimeImmutable $date,

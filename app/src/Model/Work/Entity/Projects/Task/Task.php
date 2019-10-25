@@ -143,6 +143,12 @@ class Task implements AggregateRoot
      */
     private $changes;
 
+    /**
+     * @ORM\Version()
+     * @ORM\Column(type="integer")
+     */
+    private $version;
+
     public function __construct(
         Id $id,
         Project $project,

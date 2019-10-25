@@ -33,6 +33,12 @@ class Role
     private $permissions;
 
     /**
+     * @ORM\Version()
+     * @ORM\Column(type="integer")
+     */
+    private $version;
+
+    /**
      * Role constructor.
      * @param Id $id
      * @param string $name

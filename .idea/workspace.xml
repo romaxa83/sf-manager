@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ff18bb1-91bc-4455-878b-a2d1a4e71642" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Annotation/RequiresUserCredits.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/Annotation/RequiresUserCreditsSubscriber.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/HomeController.php" afterPath="$PROJECT_DIR$/app/src/Controller/HomeController.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/User/Entity/User/User.php" afterPath="$PROJECT_DIR$/app/src/Model/User/Entity/User/User.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php" />
+      <change beforePath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" afterPath="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" />
     </list>
     <ignored path="$PROJECT_DIR$/app/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,60 +21,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Controller/Api/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="57" column="15" lean-forward="false" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
-              <folding>
-                <element signature="e#64#94#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TasksController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Controller/Api/Work/Projects/TasksController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8352">
-              <caret line="489" column="42" lean-forward="false" selection-start-line="489" selection-start-column="42" selection-end-line="489" selection-end-column="42" />
-              <folding>
-                <element signature="e#78#122#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocsCommand.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Command/Api/DocsCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="php-cli.docker" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/docker/dev/php-cli.docker">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequiresUserCredits.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Annotation/RequiresUserCredits.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -86,13 +32,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequiresUserCreditsSubscriber.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequiresUserCreditsSubscriber.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Annotation/RequiresUserCreditsSubscriber.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#60#94#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="149" column="21" lean-forward="false" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Department.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Department.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-432">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Model/User/Entity/User/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Version20191025124928.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20191025124928.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+              <folding>
+                <marker date="1572007805859" expanded="true" signature="658:715" ph="ALTER TABLE user_users... " />
+                <marker date="1572007805859" expanded="true" signature="742:811" ph="ALTER TABLE work_projects_projects... " />
+                <marker date="1572007805859" expanded="true" signature="838:904" ph="ALTER TABLE work_projects_tasks... " />
+                <marker date="1572007805859" expanded="true" signature="931:997" ph="ALTER TABLE work_projects_roles... " />
+                <marker date="1572007805859" expanded="true" signature="1331:1366" ph="ALTER TABLE user_users... " />
+                <marker date="1572007805859" expanded="true" signature="1393:1440" ph="ALTER TABLE work_projects_projects... " />
+                <marker date="1572007805859" expanded="true" signature="1467:1511" ph="ALTER TABLE work_projects_tasks... " />
+                <marker date="1572007805859" expanded="true" signature="1538:1582" ph="ALTER TABLE work_projects_roles... " />
               </folding>
             </state>
           </provider>
@@ -104,28 +129,6 @@
             <state relative-caret-position="-198">
               <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Controller/Api/Auth/SignUpController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NameController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Controller/Api/Profile/NameController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="67" />
-              <folding>
-                <element signature="e#72#104#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,11 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/Event/Listener/Work/Projects/Task/EmailNotificationSubscriber.php" />
-        <option value="$PROJECT_DIR$/app/src/Event/Listener/Work/Projects/Task/FileRemoveSubscriber.php" />
-        <option value="$PROJECT_DIR$/app/templates/mail/work/projects/task/executor-assigned-executor.html.twig" />
-        <option value="$PROJECT_DIR$/app/templates/mail/work/projects/task/executor-assigned-author.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/packages/messenger.yaml" />
         <option value="$PROJECT_DIR$/app/config/packages/swiftmailer.yaml" />
         <option value="$PROJECT_DIR$/centrifugo/docker/development/cenrifugo/config.json" />
         <option value="$PROJECT_DIR$/app/package.json" />
@@ -195,6 +193,11 @@
         <option value="$PROJECT_DIR$/app/src/Annotation/RequiresUserCredits.php" />
         <option value="$PROJECT_DIR$/app/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/app/src/Annotation/RequiresUserCreditsSubscriber.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php" />
+        <option value="$PROJECT_DIR$/app/src/Model/User/Entity/User/User.php" />
+        <option value="$PROJECT_DIR$/app/src/Migrations/Version20191025124928.php" />
       </list>
     </option>
   </component>
@@ -358,8 +361,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
-    <option name="y" value="225" />
+    <option name="x" value="183" />
+    <option name="y" value="138" />
     <option name="width" value="1417" />
     <option name="height" value="710" />
   </component>
@@ -403,14 +406,41 @@
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Annotation" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sf-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -562,18 +592,18 @@
       <workItem from="1571584192383" duration="1910000" />
       <workItem from="1571586409966" duration="1267000" />
       <workItem from="1571641494788" duration="4854000" />
-      <workItem from="1571989265527" duration="3472000" />
+      <workItem from="1571989265527" duration="4479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410711000" />
+    <option name="totallyTimeSpent" value="411718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="225" width="1417" height="710" extended-state="0" />
+    <frame x="183" y="138" width="1417" height="710" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23851204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23851204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32667875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -629,48 +659,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/Twig/Extension/CentrifugoExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/twig.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Model/User/UseCase/SignUp/Request/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/vendor/symfony/serializer/SerializerInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -861,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/DataFixtures/OAuth/ClientFixture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -929,7 +910,7 @@
         <state relative-caret-position="8352">
           <caret line="489" column="42" lean-forward="false" selection-start-line="489" selection-start-column="42" selection-end-line="489" selection-end-column="42" />
           <folding>
-            <element signature="e#78#122#0#PHP" expanded="true" />
+            <element signature="e#78#122#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -939,7 +920,7 @@
         <state relative-caret-position="684">
           <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="67" />
           <folding>
-            <element signature="e#72#104#0#PHP" expanded="true" />
+            <element signature="e#72#104#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -949,7 +930,7 @@
         <state relative-caret-position="972">
           <caret line="57" column="15" lean-forward="false" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
           <folding>
-            <element signature="e#64#94#0#PHP" expanded="true" />
+            <element signature="e#64#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -999,9 +980,74 @@
     <entry file="file://$PROJECT_DIR$/app/src/Annotation/RequiresUserCreditsSubscriber.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="e#60#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Task/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="149" column="21" lean-forward="false" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Project/Department/Department.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/Work/Entity/Projects/Role/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Model/User/Entity/User/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Migrations/Version20191025124928.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding>
+            <marker date="1572007805859" expanded="true" signature="658:715" ph="ALTER TABLE user_users... " />
+            <marker date="1572007805859" expanded="true" signature="742:811" ph="ALTER TABLE work_projects_projects... " />
+            <marker date="1572007805859" expanded="true" signature="838:904" ph="ALTER TABLE work_projects_tasks... " />
+            <marker date="1572007805859" expanded="true" signature="931:997" ph="ALTER TABLE work_projects_roles... " />
+            <marker date="1572007805859" expanded="true" signature="1331:1366" ph="ALTER TABLE user_users... " />
+            <marker date="1572007805859" expanded="true" signature="1393:1440" ph="ALTER TABLE work_projects_projects... " />
+            <marker date="1572007805859" expanded="true" signature="1467:1511" ph="ALTER TABLE work_projects_tasks... " />
+            <marker date="1572007805859" expanded="true" signature="1538:1582" ph="ALTER TABLE work_projects_roles... " />
           </folding>
         </state>
       </provider>
